@@ -13,6 +13,27 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
+        path: `${__dirname}/content/images`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
@@ -24,11 +45,21 @@ module.exports = {
         },
       },
     },
+
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-transformer-remark",
       options: {
-        name: `posts`,
-        path: `${__dirname}/content/posts/`,
+        plugins: [
+          "gatsby-remark-relative-images",
+          "gatsby-remark-normalize-paths",
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1000,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
       },
     },
     {

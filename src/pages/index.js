@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 
 import { Wrap, Section, Grid } from "../components/styled"
 import styled from "styled-components"
+import SectionArticles from "../components/sections/articles"
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,11 @@ const IndexPage = () => (
           <TempBlock>1</TempBlock>
           <TempBlock>2</TempBlock>
         </Grid>
+      </Wrap>
+    </Section>
+    <Section>
+      <Wrap>
+        <SectionArticles />
       </Wrap>
     </Section>
   </Layout>
