@@ -11,6 +11,8 @@ sections:
   label: Inlägg
   create: documents
   match: "**/*"
+  templates:
+  - inlagg
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
