@@ -22,7 +22,7 @@ fields:
   config:
     required: false
     date_format: 
-    time_format: 
+    time_format: HH:mm
     display_utc: false
   default: now
   label: Datum
