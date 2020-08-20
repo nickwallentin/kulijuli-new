@@ -1,4 +1,28 @@
 ---
 label: Inlägg
 hide_body: false
-fields: []
+fields:
+- name: mainImage
+  type: file
+  config:
+    maxSize: 64
+  label: Huvudbild
+- name: title
+  type: text
+  config:
+    required: false
+  label: Rubrik
+- name: public
+  type: boolean
+  label: Publicerad
+  default: false
+- name: date
+  type: datetime
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+  label: Datum
