@@ -1,42 +1,53 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import styled from "styled-components"
 import React from "react"
 
+import Logo from "../assets/kulijuli-logo.svg"
+
+import { Wrap } from "../components/styled"
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+  <StyledHeader>
+    <Wrap>
+      <div id="links">
+        <div id="left">
+          <a>Link 1</a>
+          <a>Link 2</a>
+        </div>
+        <div id="center">
+          <Logo />
+        </div>
+        <div id="right">
+          <a>Link 3</a>
+          <a>Link 4</a>
+        </div>
+      </div>
+    </Wrap>
+  </StyledHeader>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const StyledHeader = styled.header`
+  padding: 15px 0px;
+  ${Wrap} > #links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #left,
+    #right {
+      width: 300px;
+      display: flex;
+      justify-content: center;
+    }
+    #center {
+      svg {
+        height: 80px;
+      }
+    }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+    a {
+      padding: 15px;
+    }
+  }
+`
 
 export default Header

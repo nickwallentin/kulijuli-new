@@ -1,0 +1,16 @@
+:root {
+  --c-pri: #069677;
+  --c-sec: #fac222;
+}
+
+body,
+body.light {
+  --c-bg: #f4f4f4;
+  --c-heading: #000000;
+
+  background: var(--c-bg);
+}
+
+body.dark {
+  background: var(--c-bg);
+}
