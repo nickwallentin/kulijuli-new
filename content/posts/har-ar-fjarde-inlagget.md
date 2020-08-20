@@ -1,6 +1,6 @@
 ---
 date: 2020-08-20T10:41:47Z
-mainImage: "/content/images/jo-hcpkofhdpbi-unsplash.jpg"
+mainImage: "/content/images/oriento-4sfo-duesvy-unsplash.jpg"
 title: Här är fjärde inlägget
 public: false
 
