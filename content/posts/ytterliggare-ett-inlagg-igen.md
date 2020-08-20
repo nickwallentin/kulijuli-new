@@ -1,6 +1,6 @@
 ---
 date: 2020-08-20T10:41:47Z
-mainImage: "/content/images/pawel-czerwinski-c2twwnkexfw-unsplash.jpg"
+mainImage: "/content/images/jo-hcpkofhdpbi-unsplash.jpg"
 title: Ytterliggare ett inlägg igen
 public: false
 
