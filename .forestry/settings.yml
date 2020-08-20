@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: Innehåll
 - type: directory
-  path: posts
+  path: content/posts
   label: Inlägg
   create: documents
   match: "**/*"
