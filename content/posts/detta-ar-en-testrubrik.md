@@ -1,6 +1,6 @@
 ---
 date: 2020-08-20T09:54:44Z
-mainImage: "/uploads/harley-davidson-1lg7p5hc2pi-unsplash.jpg"
+mainImage: "/content/images/harley-davidson-1lg7p5hc2pi-unsplash.jpg"
 title: Detta är en testrubrik
 public: false
 
