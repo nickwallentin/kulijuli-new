@@ -27,4 +27,4 @@ fields:
   default: now
   label: Datum
 pages:
-- posts/detta-ar-en-testrubrik.md
+- content/posts/detta-ar-en-testrubrik.md
