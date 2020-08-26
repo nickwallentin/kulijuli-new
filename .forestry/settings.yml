@@ -13,6 +13,13 @@ sections:
   match: "**/*"
   templates:
   - inlagg
+- type: directory
+  path: content/podcast
+  label: Podcast
+  create: documents
+  match: "**/*"
+  templates:
+  - podcast
 upload_dir: content/images
 public_path: "/content/images"
 front_matter_path: ''

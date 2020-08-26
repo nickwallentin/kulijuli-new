@@ -1,0 +1,14 @@
+---
+label: Podcast
+hide_body: false
+fields:
+- name: episode
+  type: text
+  config:
+    required: false
+  label: Avsnitt
+- name: spotify_url
+  type: text
+  config:
+    required: false
+  label: Spotify URL
