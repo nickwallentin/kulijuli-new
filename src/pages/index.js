@@ -32,19 +32,14 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Kulijuli - Skånes största allsångsevenemang" />
       <Section>
         <Wrap>
           <Grid cols="2fr 1fr">
             <ContentBlock to="/" id="main-block">
               <h2>
-                <span>Kulijuli 2021</span> Skånes stora allsång
+                <span>Kulijuli 2021</span> Skånes största allsångsevenemang
               </h2>
-              <p>
-                Kulijuli är Skånes största allsångsevenemang – ett
-                nöjesarrangemang som i mångt och mycket påminner om ”Allsång på
-                Skansen” och ”Lotta på Liseberg”.
-              </p>
 
               <Link className="button" to="/kulijuli-2021">
                 Läs mer

@@ -28,8 +28,8 @@ const PageLayout = ({ children }) => {
       <Section space="30px 0px 0px 0px">
         <Wrap>
           <Hero>
-            <h1>
-              <span>Kulijuli 2021</span> Skånes stora allsång
+            <h1 style={{ maxWidth: "500px" }}>
+              <span>Kulijuli 2021</span> Skånes största allsångsevenemang
             </h1>
             <a href="#" className="button">
               Köp biljetter
