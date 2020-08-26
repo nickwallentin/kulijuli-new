@@ -7,6 +7,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Nunito\:400,700`],
+        display: "swap",
+      },
+    },
+
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -41,7 +49,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/, // See below to configure properly
+          include: /assets/,
         },
       },
     },

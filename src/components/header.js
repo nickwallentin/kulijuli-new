@@ -11,15 +11,17 @@ const Header = ({ siteTitle }) => (
     <Wrap>
       <div id="links">
         <div id="left">
-          <a>Link 1</a>
-          <a>Link 2</a>
+          <Link to="/kulijuli-2021">Kulijuli 2021</Link>
+          <Link to="/podcast">Podcast</Link>
         </div>
         <div id="center">
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </div>
         <div id="right">
-          <a>Link 3</a>
-          <a>Link 4</a>
+          <Link to="/hx-grytan-2020">Hx-Grytan</Link>
+          <Link to="/nyheter">Nyheter</Link>
         </div>
       </div>
     </Wrap>
@@ -39,6 +41,9 @@ const StyledHeader = styled.header`
       justify-content: center;
     }
     #center {
+      a {
+        padding: 0px !important;
+      }
       svg {
         height: 80px;
       }
@@ -46,6 +51,9 @@ const StyledHeader = styled.header`
 
     a {
       padding: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      color: inherit;
     }
   }
 `

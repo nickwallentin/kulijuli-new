@@ -7,12 +7,13 @@ export const Wrap = styled.div`
 `
 
 export const Section = styled.section`
+  background: ${props => (props.bg ? props.bg : "initial")};
   padding: ${props => (props.space ? props.space : "30px 0px")};
 `
 
 export const Grid = styled.div`
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 30px;
   grid-template-columns: ${props => (props.cols ? props.cols : "1fr 1fr")};
 
   @media (max-width: 979px) {

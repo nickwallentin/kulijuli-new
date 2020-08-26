@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import useBlogData from "../../queries/useBlogData"
+import { Link } from "gatsby"
 
 const SectionArticles = () => {
   const posts = useBlogData()
@@ -10,26 +11,36 @@ const SectionArticles = () => {
       <h2>Senaste inläggen</h2>
       <ArticlesLayout>
         <div className="latest">
-          <article className="latest">
-            <Img
-              fluid={posts[0].node.frontmatter.mainImage.childImageSharp.fluid}
-            />
-
-            {posts[0].node.frontmatter.title}
-          </article>
+          <Link to={posts[0].node.fields.slug}>
+            <article className="latest">
+              <Img
+                fluid={
+                  posts[0].node.frontmatter.mainImage.childImageSharp.fluid
+                }
+              />
+              <small>{posts[0].node.frontmatter.date}</small>
+              <h3>{posts[0].node.frontmatter.title}</h3>
+              <p>{posts[0].node.excerpt}</p>
+            </article>
+          </Link>
         </div>
         <div className="posts">
           {posts.map(({ node: post }, index) => {
             if (index !== 0) {
               return (
-                <article key={post.id}>
-                  <Img
-                    fluid={post.frontmatter.mainImage.childImageSharp.fluid}
-                  />
-                  <div className="article-content">
-                    {post.frontmatter.title}
-                  </div>
-                </article>
+                <Link to={post.fields.slug}>
+                  <article key={post.id}>
+                    <Img
+                      fluid={post.frontmatter.mainImage.childImageSharp.fluid}
+                    />
+                    <div className="article-content">
+                      <small>{post.frontmatter.date}</small>
+                      <h3>{post.frontmatter.title}</h3>
+
+                      <p>{post.excerpt}</p>
+                    </div>
+                  </article>
+                </Link>
               )
             }
           })}
@@ -45,12 +56,31 @@ const ArticlesLayout = styled.div`
   display: grid;
 
   grid-gap: 20px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
   @media (min-width: 980px) {
     grid-template-columns: 1fr 2fr;
   }
+  .gatsby-image-wrapper {
+    border-radius: 4px;
+  }
+  .latest {
+    article {
+      small {
+        display: block;
+        margin: 15px 0px 5px 0px;
+      }
+      h3 {
+        margin: 0px 0px 15px 0px;
+      }
+    }
+  }
   .posts {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
     @media (min-width: 980px) {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
@@ -59,6 +89,16 @@ const ArticlesLayout = styled.div`
       display: grid;
       grid-gap: 15px;
       grid-template-columns: 1fr 1fr;
+      h3 {
+        font-size: 1rem;
+        margin: 0px 0px 10px 0px;
+      }
+      p {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+      }
     }
   }
 `
