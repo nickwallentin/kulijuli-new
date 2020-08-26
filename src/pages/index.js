@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
@@ -6,7 +7,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { Wrap, Section, Grid } from "../components/styled"
-import styled from "styled-components"
 
 import SectionArticles from "../components/sections/articles"
 import SectionLatestPodcast from "../components/sections/latestPodcast"
@@ -36,29 +36,24 @@ const IndexPage = () => {
       <Section>
         <Wrap>
           <Grid cols="2fr 1fr">
-            <ContentBlock to="/" id="main-block">
+            <ContentBlockOne>
               <h2>
-                <span>Kulijuli 2021</span> Skånes största allsångsevenemang
+                <span>Kulijuli 2021</span>Skåne största allsångsevenemang
               </h2>
-
-              <Link className="button" to="/kulijuli-2021">
-                Läs mer
-              </Link>
+              <div className="button">Läs mer</div>
               <Img
                 className="backdrop"
                 fluid={images.allFile.edges[0].node.childImageSharp.fluid}
               />
-            </ContentBlock>
-            <ContentBlock to="/" id="secondary-block">
+            </ContentBlockOne>
+            <ContentBlockTwo to="/podcast">
               <h2>
                 <span>Kulijulipodden</span>
                 Skånes bästa podcast
               </h2>
 
-              <Link className="button" to="/podcast">
-                Lyssna nu
-              </Link>
-            </ContentBlock>
+              <div className="button">Lyssna nu</div>
+            </ContentBlockTwo>
           </Grid>
         </Wrap>
       </Section>
@@ -88,7 +83,7 @@ const IndexPage = () => {
 
 export default IndexPage
 
-const ContentBlock = styled(Link)`
+const ContentBlockOne = styled(Link)`
   height: 400px;
   position: relative;
   border-radius: 5px;
@@ -99,7 +94,7 @@ const ContentBlock = styled(Link)`
   text-decoration: none;
   color: inherit;
 
-  a.button {
+  .button {
     display: flex;
     padding: 15px 30px;
     border-radius: 4px;
@@ -110,47 +105,64 @@ const ContentBlock = styled(Link)`
     margin-top: 30px;
   }
 
-  &#main-block {
-    background: var(--c-pri);
-    color: white;
-    h2 {
-      font-size: 2rem;
-      span {
-        display: block;
-        font-size: 60%;
-        margin-bottom: 5px;
-        color: var(--c-sec);
-      }
+  background: var(--c-pri);
+  color: white;
+  h2 {
+    font-size: 2rem;
+    span {
+      display: block;
+      font-size: 60%;
+      margin-bottom: 5px;
+      color: var(--c-sec);
     }
-    h2,
-    p {
-      max-width: 400px;
-      z-index: 1;
-    }
+  }
+  h2,
+  p {
+    max-width: 400px;
+    z-index: 1;
+  }
 
-    a.button {
-      background: var(--c-sec);
-      color: black;
-      z-index: 1;
+  .button {
+    background: var(--c-sec);
+    color: black;
+    z-index: 1;
+  }
+`
+const ContentBlockTwo = styled(Link)`
+  height: 400px;
+  position: relative;
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  background: var(--c-sec);
+
+  .button {
+    display: flex;
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    span {
+      display: block;
+      font-size: 60%;
+      margin-bottom: 5px;
+      color: var(--c-pri);
     }
   }
 
-  &#secondary-block {
-    background: var(--c-sec);
-
-    h2 {
-      font-size: 2rem;
-      span {
-        display: block;
-        font-size: 60%;
-        margin-bottom: 5px;
-        color: var(--c-pri);
-      }
-    }
-
-    a.button {
-      background: var(--c-pri);
-      color: white;
-    }
+  .button {
+    background: var(--c-pri);
+    color: white;
   }
 `
