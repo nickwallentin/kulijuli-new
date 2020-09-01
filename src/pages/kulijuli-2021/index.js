@@ -1,13 +1,36 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 
 import Layout from "../../components/layout"
 import PageLayout from "./layout"
 import SEO from "../../components/seo"
+import CreandiaLogo from "../../assets/creandia-logo.svg"
 
 import { Wrap, Section, Grid } from "../../components/styled"
 
 const EventPage = () => {
+  const images = useStaticQuery(graphql`
+    query getEventPageImages {
+      allFile(
+        filter: { relativeDirectory: { eq: "eventPage" } }
+        sort: { fields: name }
+      ) {
+        edges {
+          node {
+            id
+            childImageSharp {
+              fluid(maxWidth: 500, maxHeight: 500, cropFocus: ATTENTION) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <PageLayout>
       <SEO title="Kulijuli 2021: Skånes stora allsång" />
@@ -19,9 +42,12 @@ const EventPage = () => {
         <Wrap>
           <Grid style={{ marginBottom: "3rem" }} cols="1fr 2fr">
             <div>
-              <figure>img</figure>
+              <Img
+                style={{ borderRadius: "4px" }}
+                fluid={images.allFile.edges[1].node.childImageSharp.fluid}
+              />
             </div>
-            <div>
+            <div className="flex">
               <h2>Skånes största allsångsevenemang.</h2>
               <p>
                 Kulijuli är Skånes största allsångsevenemang – ett
@@ -34,8 +60,8 @@ const EventPage = () => {
             </div>
           </Grid>
           <Grid style={{ marginBottom: "3rem" }} cols="2fr 1fr">
-            <div>
-              <h2>Pågått i över 50 år.</h2>
+            <div className="flex">
+              <h2>En tradition i över 50 år.</h2>
               <p>
                 I över femtio år har det populära allsångs-evenemanget
                 genomförts. Mängder av artister har mött publiken i nöjesgrytan,
@@ -45,14 +71,20 @@ const EventPage = () => {
               </p>
             </div>
             <div>
-              <figure>img</figure>
+              <Img
+                style={{ borderRadius: "4px" }}
+                fluid={images.allFile.edges[2].node.childImageSharp.fluid}
+              />
             </div>
           </Grid>
           <Grid style={{ marginBottom: "3rem" }} cols="1fr 2fr">
             <div>
-              <figure>img</figure>
+              <Img
+                style={{ borderRadius: "4px" }}
+                fluid={images.allFile.edges[3].node.childImageSharp.fluid}
+              />
             </div>
-            <div>
+            <div className="flex">
               <h2>Lokal och glädjefylld underhållning.</h2>
               <p>
                 Evenemanget karaktäriseras av ett glatt programvärdskap, lokala
@@ -64,7 +96,7 @@ const EventPage = () => {
             </div>
           </Grid>
           <Grid style={{ marginBottom: "3rem" }} cols="2fr 1fr">
-            <div>
+            <div className="flex">
               <h2>Varierat utbud av akter.</h2>
               <p>
                 Kulijuli erbjuder det mesta av det bästa av regionens utbud –
@@ -74,12 +106,15 @@ const EventPage = () => {
               </p>
             </div>
             <div>
-              <figure>img</figure>
+              <Img
+                style={{ borderRadius: "4px" }}
+                fluid={images.allFile.edges[4].node.childImageSharp.fluid}
+              />
             </div>
           </Grid>
           <HostSection style={{ marginBottom: "3rem" }}>
-            <figure>image</figure>
-            <div>
+            <Img fluid={images.allFile.edges[5].node.childImageSharp.fluid} />
+            <div className="flex">
               <h2>Programvärdar</h2>
               <p>
                 Kulijuli leds av programvärdarna Dennis Westerberg och Lena
@@ -105,8 +140,8 @@ const EventPage = () => {
             </div>
           </HostSection>
           <Grid cols="1fr 2fr">
-            <figure>img</figure>
-            <div>
+            <CreandiaLogo style={{ width: "100%" }} />
+            <div className="flex">
               <h2>Produktion</h2>
               <p>
                 Kulijuli produceras av Creandia Event & Kommunikation – ett
@@ -158,5 +193,8 @@ const HostSection = styled.div`
   }
   & > div {
     padding: 30px;
+  }
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr;
   }
 `

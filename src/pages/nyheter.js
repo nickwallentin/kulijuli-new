@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
@@ -9,6 +10,7 @@ import useBlogData from "../queries/useBlogData"
 
 const BlogPage = () => {
   const posts = useBlogData()
+
   return (
     <Layout>
       <SEO title="Nyheter" />
@@ -18,7 +20,10 @@ const BlogPage = () => {
             <h1>
               Nyheter <span>Senaste nytt från Kulijuli</span>
             </h1>
-            <Article style={{ maxWidth: "700px", margin: "0 auto" }}>
+            <Article
+              to={"/" + posts[0].node.fields.slug}
+              style={{ maxWidth: "700px", margin: "0 auto" }}
+            >
               <Img
                 fluid={
                   posts[0].node.frontmatter.mainImage.childImageSharp.fluid
@@ -45,7 +50,7 @@ const BlogPage = () => {
             {posts.map(({ node: post }, index) => {
               if (index !== 0) {
                 return (
-                  <Article>
+                  <Article key={post.fields.slug} to={`/${post.fields.slug}`}>
                     <Img
                       fluid={post.frontmatter.mainImage.childImageSharp.fluid}
                     />
@@ -94,7 +99,10 @@ const Hero = styled.div`
     }
   }
 `
-const Article = styled.article`
+const Article = styled(Link)`
+  display: block;
+  color: inherit;
+  text-decoration: none;
   .gatsby-image-wrapper {
     border-radius: 4px;
   }

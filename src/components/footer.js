@@ -15,27 +15,36 @@ const Footer = () => {
                 <Link to="/kulijuli-2021">Kulijuli 2021</Link>
               </li>
               <li>
-                <Link to="/podcast">Podcast</Link>
+                <Link to="/podcast">Kulijulipodden</Link>
               </li>
               <li>
-                <Link to="/hx-grytan">Hx-Grytan</Link>
+                <Link to="/hx-grytan-2020">Hx-Grytan 2020</Link>
               </li>
               <li>
                 <Link to="/nyheter">Nyheter</Link>
               </li>
-              <li>
-                <Link to="/om">Om Kulijuli</Link>
-              </li>
             </ul>
           </div>
           <div>
-            <h4>Följ oss</h4>
+            <h4>Socialt</h4>
             <ul>
               <li>
-                <Link to="/kulijuli-2021">Instagram</Link>
+                <a
+                  href="https://www.instagram.com/kulijulinojesgrytan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
               </li>
               <li>
-                <Link to="/podcast">Facebook</Link>
+                <a
+                  href="https://www.facebook.com/kulijulinojesgrytan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
               </li>
               <li>
                 <Link to="/kulijuli-2021">Nyhetsbrev</Link>
@@ -50,6 +59,26 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/podcast">Grafiskt material</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Kontakt</h4>
+            <ul>
+              <li>
+                <a href="mailto:info@kulijuli.se">info@kulijuli.se</a>
+              </li>
+              <li>
+                <a href="tel:0739693636">073-969 36 36</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/messages/t/kulijulinojesgrytan"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Chatta med oss
+                </a>
               </li>
             </ul>
           </div>
@@ -74,7 +103,7 @@ const StyledFooter = styled.footer`
 
   .footer-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
     margin-bottom: 30px;
     h4 {
@@ -91,6 +120,9 @@ const StyledFooter = styled.footer`
           color: inherit;
         }
       }
+    }
+    @media (max-width: 980px) {
+      grid-template-columns: 1fr 1fr;
     }
   }
 

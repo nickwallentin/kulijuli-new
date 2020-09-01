@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
@@ -10,7 +11,7 @@ const SinglePostTemplate = props => {
   return (
     <Layout>
       <SEO />
-      <Section>
+      <Section bg="linear-gradient(180deg, rgba(244,244,244,1) 0%, rgba(244,244,244,1) 30%, rgba(255,255,255,1) 30%, rgba(244,244,244,1) 100%)">
         <Wrap>
           <Article>
             <div id="article-meta">
@@ -35,10 +36,13 @@ const Article = styled.article`
   .gatsby-image-wrapper {
     border-radius: 4px;
   }
-  #article-content,
+  #article-content {
+    max-width: 700px;
+    margin: 2rem auto 0rem auto;
+  }
   #article-meta {
     max-width: 700px;
-    margin: 2rem auto;
+    margin: 0rem auto 2rem auto;
   }
 `
 

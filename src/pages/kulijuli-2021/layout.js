@@ -8,7 +8,7 @@ import { Section, Wrap } from "../../components/styled"
 
 const PageLayout = ({ children }) => {
   const images = useStaticQuery(graphql`
-    query getEventPageImages {
+    query getEventPageMainImage {
       allFile(filter: { relativeDirectory: { eq: "eventPage" } }) {
         edges {
           node {
@@ -95,7 +95,8 @@ const Hero = styled.div`
   }
 `
 const PageNav = styled.ul`
-  margin: 0px;
+  max-width: 700px;
+  margin: 0px auto;
   margin-top: 30px;
   padding: 0px;
   list-style: none;

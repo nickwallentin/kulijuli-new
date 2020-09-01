@@ -28,8 +28,8 @@ const SectionArticles = () => {
           {posts.map(({ node: post }, index) => {
             if (index !== 0) {
               return (
-                <Link to={post.fields.slug}>
-                  <article key={post.id}>
+                <Link key={post.id} to={post.fields.slug}>
+                  <article>
                     <Img
                       fluid={post.frontmatter.mainImage.childImageSharp.fluid}
                     />

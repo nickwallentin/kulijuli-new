@@ -69,7 +69,8 @@ const Hero = styled.div`
   }
 `
 const PageNav = styled.ul`
-  margin: 0px;
+  max-width: 700px;
+  margin: 0px auto;
   margin-top: 30px;
   padding: 0px;
   list-style: none;

@@ -46,9 +46,28 @@ const PodcastPage = () => {
                   <figure>img</figure>
                 </div>
               </Grid>
+              <Grid style={{ marginBottom: "2rem" }} cols="1fr 2fr">
+                <div>
+                  <figure>img</figure>
+                </div>
+                <div>
+                  <h2>Nytt avsnitt varannan vecka</h2>
+                  <p>
+                    Varje avsnitt är 60 minuter långt, och varvar intervjuer och
+                    samtal med musik, tävlingar och lokala inslag. Podden kommer
+                    ut varannan vecka, och släpps via www.kulijuli.se, samt
+                    finns tillgänglig på alla de plattformar där poddar
+                    vanligtvis går att finna (Spotify, iTunes, Acast och
+                    Podcaster).
+                  </p>
+                </div>
+              </Grid>
             </React.Fragment>
           ) : (
-            <h2>Alla avsnitt</h2>
+            <React.Fragment>
+              <h2>Alla avsnitt</h2>
+              <p>Kommer snart</p>
+            </React.Fragment>
           )}
         </Wrap>
       </Section>

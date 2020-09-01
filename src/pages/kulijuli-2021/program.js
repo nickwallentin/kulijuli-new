@@ -5,7 +5,7 @@ import Layout from "../../components/layout"
 import PageLayout from "./layout"
 import SEO from "../../components/seo"
 
-import { Wrap, Section, Grid } from "../../components/styled"
+import { Wrap, Section, Grid, Message } from "../../components/styled"
 
 const ProgramPage = () => {
   return (
@@ -18,6 +18,7 @@ const ProgramPage = () => {
       >
         <Wrap>
           <h2>Program</h2>
+          <Message>Programmet kommer under 2021.</Message>
         </Wrap>
       </Section>
     </PageLayout>

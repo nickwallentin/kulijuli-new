@@ -36,7 +36,7 @@ const IndexPage = () => {
       <Section>
         <Wrap>
           <Grid cols="2fr 1fr">
-            <ContentBlockOne>
+            <ContentBlockOne to="/kulijuli-2021">
               <h2>
                 <span>Kulijuli 2021</span>Skåne största allsångsevenemang
               </h2>
@@ -93,6 +93,7 @@ const ContentBlockOne = styled(Link)`
   justify-content: center;
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
 
   .button {
     display: flex;
@@ -102,7 +103,6 @@ const ContentBlockOne = styled(Link)`
     text-decoration: none;
     font-weight: 700;
     align-self: flex-start;
-    margin-top: 30px;
   }
 
   background: var(--c-pri);
@@ -148,7 +148,6 @@ const ContentBlockTwo = styled(Link)`
     text-decoration: none;
     font-weight: 700;
     align-self: flex-start;
-    margin-top: 30px;
   }
 
   h2 {

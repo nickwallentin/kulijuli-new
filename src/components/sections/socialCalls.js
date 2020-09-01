@@ -9,16 +9,26 @@ const SectionSocialCalls = () => {
     <React.Fragment>
       <h2>Mer av Kulijuli</h2>
       <SocialBlocks>
-        <div className="instagram">
+        <a
+          href="https://www.instagram.com/kulijulinojesgrytan/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="instagram"
+        >
           <InstagramIcon />
           <h4>Följ oss på Instagram</h4>
           <p>Följ med Kulijuli bakom rampljuset.</p>
-        </div>
-        <div className="facebook">
+        </a>
+        <a
+          href="https://www.facebook.com/kulijulinojesgrytan"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="facebook"
+        >
           <FacebookIcon />
           <h4>Följ oss på Facebook</h4>
           <p>Se exklusivt innehåll från Kulijuli.</p>
-        </div>
+        </a>
       </SocialBlocks>
     </React.Fragment>
   )
@@ -31,12 +41,17 @@ const SocialBlocks = styled.div`
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
 
-  & > div {
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr;
+  }
+
+  & > a {
     padding: 30px 20px;
     background: white;
     border-radius: 4px;
     color: white;
     cursor: pointer;
+    text-decoration: none;
     text-align: center;
 
     &:hover {
