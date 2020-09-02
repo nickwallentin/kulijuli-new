@@ -61,6 +61,14 @@ function SEO({ description, lang, meta, title }) {
           content: `https://www.kulijuli.se${site.siteMetadata.defaultImage}`,
         },
         {
+          property: `og:image:width`,
+          content: `1200`,
+        },
+        {
+          property: `og:image:height`,
+          content: `628`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
