@@ -10,7 +10,10 @@ const SinglePostTemplate = props => {
   const post = props.data.markdownRemark
   return (
     <Layout>
-      <SEO />
+      <SEO
+        title={post.frontmatter.title}
+        image={post.frontmatter.mainImage.childImageSharp.fluid.src}
+      />
       <Section bg="linear-gradient(180deg, rgba(244,244,244,1) 0%, rgba(244,244,244,1) 30%, rgba(255,255,255,1) 30%, rgba(244,244,244,1) 100%)">
         <Wrap>
           <Article>
