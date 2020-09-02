@@ -21,9 +21,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
   //get path to template
   const blogTemplate = path.resolve("./src/templates/post.js")
   //get slugs
-  const response = await graphql(`
+  const posts = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(posts)/" } }) {
         edges {
           node {
             fields {
@@ -35,7 +35,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
   //create new pages with unique slug
-  response.data.allMarkdownRemark.edges.forEach(edge => {
+  posts.data.allMarkdownRemark.edges.forEach(edge => {
     createPage({
       component: blogTemplate,
       path: `/${edge.node.fields.slug}`,
