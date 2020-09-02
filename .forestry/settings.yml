@@ -20,6 +20,11 @@ sections:
   match: "**/*"
   templates:
   - podcast
+- type: directory
+  path: content/press
+  label: Press
+  create: documents
+  match: "**/*"
 upload_dir: content/images
 public_path: "/content/images"
 front_matter_path: ''
