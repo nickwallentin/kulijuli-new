@@ -1,4 +1,23 @@
 ---
 label: Press
 hide_body: true
-fields: []
+fields:
+- name: url
+  type: text
+  config:
+    required: false
+  label: URL
+- name: title
+  type: text
+  config:
+    required: false
+  label: Rubrik
+- name: published
+  type: datetime
+  label: Publicerades
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
