@@ -1,9 +1,10 @@
-import { useStaticQuest, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 export default function useBlogData() {
   const data = useStaticQuery(graphql`
     query getBlogData {
       allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(posts)/" } }
         sort: { order: DESC, fields: frontmatter___date }
         limit: 5
       ) {

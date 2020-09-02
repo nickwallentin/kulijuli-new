@@ -7,7 +7,7 @@ import { Section, Wrap } from "../components/styled"
 const PressPage = () => {
   return (
     <Layout>
-      <SEO />
+      <SEO title="" />
       <Section>
         <Wrap>
           <h1>
