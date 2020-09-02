@@ -46,19 +46,16 @@ const Footer = () => {
                   Facebook
                 </a>
               </li>
-              <li>
-                <Link to="/kulijuli-2021">Nyhetsbrev</Link>
-              </li>
             </ul>
           </div>
           <div>
             <h4>Press</h4>
             <ul>
               <li>
-                <Link to="/kulijuli-2021">Kulijuli i Media</Link>
+                <Link to="/press">Kulijuli i Media</Link>
               </li>
               <li>
-                <Link to="/podcast">Grafiskt material</Link>
+                <Link to="/press/material">Pressmaterial</Link>
               </li>
             </ul>
           </div>

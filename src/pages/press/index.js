@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { Section, Wrap } from "../components/styled"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import { Section, Wrap } from "../../components/styled"
 
-import usePressData from "../queries/usePressData"
+import usePressData from "../../queries/usePressData"
 
 const PressPage = () => {
   const press = usePressData()
