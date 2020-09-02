@@ -44,6 +44,12 @@ const PressList = styled.ul`
   li {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    margin: 0;
+    padding: 2rem 0px;
+    border-bottom: 1px solid #d8d8d8;
+    &:last-of-type {
+      border-bottom: 0px;
+    }
     span {
       display: flex;
       align-items: center;
