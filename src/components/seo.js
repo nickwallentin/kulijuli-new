@@ -20,6 +20,7 @@ function SEO({ description, lang, meta, title }) {
             description
             author
             defaultImage
+            siteUrl
           }
         }
       }
@@ -42,7 +43,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `image`,
-          content: `https://www.kulijuli.se${site.siteMetadata.defaultImage}`,
+          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.defaultImage}`,
         },
         {
           property: `og:title`,
@@ -57,8 +58,12 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: `${site.siteMetadata.siteUrl}`,
+        },
+        {
           property: `og:image`,
-          content: `https://www.kulijuli.se${site.siteMetadata.defaultImage}`,
+          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.defaultImage}`,
         },
         {
           property: `og:image:width`,

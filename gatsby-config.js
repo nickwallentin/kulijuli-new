@@ -4,6 +4,7 @@ module.exports = {
     description: `Kulijuli är en höjdpunkt för många skåningar, både äldre och yngre. Under Juli månad så bjuds det på folkkära artister, allsång och trevliga inslag på Nöjesgrytan i Helsingborg.`,
     author: `@nickwallentin`,
     defaultImage: `/images/kulijuli_web_image.png`,
+    siteUrl: `https://relaxed-meitner-54e2c5.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
