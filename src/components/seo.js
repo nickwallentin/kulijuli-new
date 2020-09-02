@@ -58,10 +58,7 @@ function SEO({ description, lang, meta, title, image }) {
           property: `og:type`,
           content: `website`,
         },
-        {
-          property: `og:url`,
-          content: `${site.siteMetadata.siteUrl}`,
-        },
+
         {
           property: `og:image`,
           content: `${site.siteMetadata.siteUrl}${metaImage}`,
