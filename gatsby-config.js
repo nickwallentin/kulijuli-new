@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Kulijuli`,
-    description: `Skånes största allsångsevenemang.`,
+    title: `Kulijuli - Skånes största allsångsevenemang`,
+    description: `Kulijuli är en höjdpunkt för många skåningar, både äldre och yngre. Under Juli månad så bjuds det på folkkära artister, allsång och trevliga inslag på Nöjesgrytan i Helsingborg.`,
     author: `@nickwallentin`,
+    defaultImage: `/images/Kulijuli_Web_image.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

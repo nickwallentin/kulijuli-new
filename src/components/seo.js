@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            defaultImage
           }
         }
       }
@@ -40,6 +41,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: `https://www.kulijuli.se${site.siteMetadata.defaultImage}`,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -52,12 +57,16 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `https://www.kulijuli.se${site.siteMetadata.defaultImage}`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: "Kulijuli",
         },
         {
           name: `twitter:title`,

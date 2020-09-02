@@ -64,5 +64,6 @@ const Download = styled.div`
   }
   h3 {
     margin: 0px;
+    font-size: 1.2rem;
   }
 `
