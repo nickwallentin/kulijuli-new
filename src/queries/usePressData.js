@@ -10,6 +10,11 @@ export default function usePressData() {
         edges {
           node {
             id
+            frontmatter {
+              title
+              published(formatString: "D MMMM, YYYY", locale: "sv")
+              url
+            }
           }
         }
       }
