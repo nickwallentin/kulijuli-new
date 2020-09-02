@@ -40,7 +40,7 @@ const HxPage = () => {
             </h1>
             <div className="featured">
               <iframe
-                width="560"
+                width="100%"
                 height="315"
                 src="https://www.youtube-nocookie.com/embed/uycH7c2y_2A"
                 frameborder="0"
@@ -108,7 +108,7 @@ export default HxPage
 
 const Hero = styled.div`
   text-align: center;
-  .latest-podcast {
+  .featured {
     max-width: 560px;
     margin: 0 auto;
   }

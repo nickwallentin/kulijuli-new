@@ -32,7 +32,7 @@ export const Grid = styled.div`
 export const Message = styled.div`
   padding: 15px;
   color: white;
-  background: blue;
+  background: #1565c0;
   border-radius: 4px;
   text-align: center;
 
