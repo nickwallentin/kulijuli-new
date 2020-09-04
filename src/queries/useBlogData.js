@@ -19,9 +19,16 @@ export default function useBlogData() {
               title
               date(formatString: "D MMMM, YYYY", locale: "sv")
 
-              mainImage {
+              largeThumb: mainImage {
                 childImageSharp {
-                  fluid(maxWidth: 800) {
+                  fluid(maxWidth: 320, maxHeight: 176) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              thumb: mainImage {
+                childImageSharp {
+                  fluid(maxWidth: 150, maxHeight: 150) {
                     ...GatsbyImageSharpFluid
                   }
                 }

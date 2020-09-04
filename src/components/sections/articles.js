@@ -15,7 +15,7 @@ const SectionArticles = () => {
             <article className="latest">
               <Img
                 fluid={
-                  posts[0].node.frontmatter.mainImage.childImageSharp.fluid
+                  posts[0].node.frontmatter.largeThumb.childImageSharp.fluid
                 }
               />
               <small>{posts[0].node.frontmatter.date}</small>
@@ -30,9 +30,7 @@ const SectionArticles = () => {
               return (
                 <Link key={post.id} to={post.fields.slug}>
                   <article>
-                    <Img
-                      fluid={post.frontmatter.mainImage.childImageSharp.fluid}
-                    />
+                    <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
                     <div className="article-content">
                       <small>{post.frontmatter.date}</small>
                       <h3>{post.frontmatter.title}</h3>

@@ -38,7 +38,7 @@ const Header = () => {
           </div>
         </div>
         <div id="mobile-nav">
-          <Link to="/">
+          <Link alt="Tillbaka till start" to="/">
             <Logo id="logo" />
           </Link>
           <MenuOpenIcon onClick={() => setMenuOpen(true)} />

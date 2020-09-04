@@ -24,6 +24,10 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
                 allowtransparency="true"
                 allow="encrypted-media"
               ></iframe>
+              <div className="sponsor">
+                Podcasten sponsras av: <br />
+                {"<sponsorlogga>"}
+              </div>
             </div>
           </Hero>
           <PageNav>
