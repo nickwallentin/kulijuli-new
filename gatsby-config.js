@@ -16,13 +16,6 @@ module.exports = {
         develop: true, // Enable while using `gatsby develop`
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Nunito\:400,700`],
-        display: "swap",
-      },
-    },
 
     {
       resolve: `gatsby-source-filesystem`,
