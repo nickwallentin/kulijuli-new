@@ -22,7 +22,7 @@ const IndexPage = () => {
             id
             childImageSharp {
               fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -62,7 +62,6 @@ const IndexPage = () => {
           <SectionArticles />
         </Wrap>
       </Section>
-
       <Section>
         <Wrap>
           <SectionSocialCalls />
