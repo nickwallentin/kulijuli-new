@@ -7,6 +7,10 @@ import Layout from "../../components/layout"
 import { Section, Wrap } from "../../components/styled"
 
 const PageLayout = ({ children, setTab, tabIndex }) => {
+  const LatestPodcastLazy = React.lazy(() =>
+    import("../../components/latestPodcast")
+  )
+  const isSSR = typeof window === "undefined"
   return (
     <Layout>
       <Section space="30px 0px 0px 0px">
@@ -16,14 +20,11 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
               Kulijulipodden <span>Lyssna på senaste avsnittet</span>
             </h1>
             <div className="latest-podcast">
-              <iframe
-                src="https://open.spotify.com/embed-podcast/show/5bkofphbE7YjGZSdPWj9x0"
-                width="100%"
-                height="232"
-                frameborder="0"
-                allowtransparency="true"
-                allow="encrypted-media"
-              ></iframe>
+              {!isSSR && (
+                <React.Suspense fallback="loading">
+                  <LatestPodcastLazy />
+                </React.Suspense>
+              )}
               <div className="sponsor">
                 Podcasten sponsras av: <br />
                 {"<sponsorlogga>"}
