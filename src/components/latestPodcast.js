@@ -1,15 +1,19 @@
 import React from "react"
+const PodcastIFrame = React.lazy(() =>
+  import("../components/latestPodcastiFrame")
+)
 
 const LatestPodcast = () => {
+  const isSSR = typeof window === "undefined"
+
   return (
-    <iframe
-      src="https://open.spotify.com/embed-podcast/show/5bkofphbE7YjGZSdPWj9x0"
-      width="100%"
-      height="232"
-      frameborder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
-    ></iframe>
+    <React.Fragment>
+      {!isSSR && (
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <PodcastIFrame />
+        </React.Suspense>
+      )}
+    </React.Fragment>
   )
 }
 

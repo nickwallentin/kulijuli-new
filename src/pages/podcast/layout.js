@@ -5,12 +5,9 @@ import Img from "gatsby-image"
 
 import Layout from "../../components/layout"
 import { Section, Wrap } from "../../components/styled"
+import LatestPodcast from "../../components/latestPodcast"
 
 const PageLayout = ({ children, setTab, tabIndex }) => {
-  const LatestPodcastLazy = React.lazy(() =>
-    import("../../components/latestPodcast")
-  )
-  const isSSR = typeof window === "undefined"
   return (
     <Layout>
       <Section space="30px 0px 0px 0px">
@@ -20,11 +17,8 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
               Kulijulipodden <span>Lyssna på senaste avsnittet</span>
             </h1>
             <div className="latest-podcast">
-              {!isSSR && (
-                <React.Suspense fallback="loading">
-                  <LatestPodcastLazy />
-                </React.Suspense>
-              )}
+              <LatestPodcast />
+
               <div className="sponsor">
                 Podcasten sponsras av: <br />
                 {"<sponsorlogga>"}
