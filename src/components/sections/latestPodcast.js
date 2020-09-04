@@ -6,8 +6,7 @@ const SectionLatestPodcast = () => {
   return (
     <React.Fragment>
       <h2>Senaste podcastavsnittet</h2>
-      {/*<LatestPodcast />*/}
-      TEST
+      <LatestPodcast />
     </React.Fragment>
   )
 }
