@@ -1,5 +1,6 @@
 import React from "react"
-import LatestPodcast from "../latestPodcast"
+import loadable from "@loadable/component"
+const LatestPodcast = loadable(() => import("../latestPodcastiFrame"))
 
 const SectionLatestPodcast = () => {
   return (

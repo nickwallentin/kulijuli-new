@@ -1,11 +1,14 @@
 import React from "react"
+import loadable from "@loadable/component"
 import styled from "styled-components"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../../components/layout"
 import { Section, Wrap } from "../../components/styled"
-import LatestPodcast from "../../components/latestPodcast"
+const LatestPodcast = loadable(() =>
+  import("../../components/latestPodcastiFrame")
+)
 
 const PageLayout = ({ children, setTab, tabIndex }) => {
   return (
