@@ -5,11 +5,11 @@ import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
 import { Section, Wrap } from "../../components/styled"
+const LatestPodcast = loadable(() =>
+  import("../../components/latestPodcastiFrame")
+)
 
 const PageLayout = ({ children, setTab, tabIndex }) => {
-  const LatestPodcast = loadable(() =>
-    import("../../components/latestPodcastiFrame")
-  )
   return (
     <Layout>
       <Section space="30px 0px 0px 0px">
