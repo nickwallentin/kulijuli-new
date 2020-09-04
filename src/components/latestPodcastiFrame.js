@@ -2,6 +2,7 @@ import React from "react"
 const LatestPodcastiFrame = () => {
   return (
     <iframe
+      title="Senaste kulijulipodden på Spotify"
       src="https://open.spotify.com/embed-podcast/show/5bkofphbE7YjGZSdPWj9x0"
       width="100%"
       height="232"

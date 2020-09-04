@@ -1,8 +1,7 @@
 import React from "react"
 import loadable from "@loadable/component"
 import styled from "styled-components"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
 import { Section, Wrap } from "../../components/styled"

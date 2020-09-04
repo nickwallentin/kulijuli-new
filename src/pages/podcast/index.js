@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import styled from "styled-components"
 
 import PageLayout from "./layout"
 import SEO from "../../components/seo"
@@ -76,27 +75,3 @@ const PodcastPage = () => {
 }
 
 export default PodcastPage
-
-const Hero = styled.div`
-  text-align: center;
-  .button.subtle {
-    padding: 5px 15px;
-    background: #00000010;
-    color: inherit;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 0.8rem;
-  }
-  .latest-podcast {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  h1 {
-    span {
-      display: block;
-      font-size: 60%;
-      color: var(--c-pri);
-    }
-  }
-`

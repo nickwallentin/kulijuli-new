@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
-import Layout from "../../components/layout"
 import PageLayout from "./layout"
 import SEO from "../../components/seo"
 import CreandiaLogo from "../../assets/creandia-logo.svg"
@@ -158,28 +157,6 @@ const EventPage = () => {
 }
 
 export default EventPage
-
-const Hero = styled.div`
-  color: white;
-  padding: 30px;
-  border-radius: 4px;
-  background: var(--c-pri);
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .latest-podcast {
-    max-width: 560px;
-    margin: 0 auto;
-  }
-  h1 {
-    span {
-      display: block;
-      font-size: 60%;
-      color: var(--c-sec);
-    }
-  }
-`
 
 const HostSection = styled.div`
   display: grid;
