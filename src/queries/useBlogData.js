@@ -33,6 +33,20 @@ export default function useBlogData() {
                   }
                 }
               }
+              mainOnNewsPage: mainImage {
+                childImageSharp {
+                  fluid(maxWidth: 600) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              onNewsPage: mainImage {
+                childImageSharp {
+                  fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }

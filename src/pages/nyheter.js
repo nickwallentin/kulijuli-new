@@ -26,7 +26,7 @@ const BlogPage = () => {
             >
               <Img
                 fluid={
-                  posts[0].node.frontmatter.mainImage.childImageSharp.fluid
+                  posts[0].node.frontmatter.mainOnNewsPage.childImageSharp.fluid
                 }
               />
 
@@ -52,7 +52,7 @@ const BlogPage = () => {
                 return (
                   <Article key={post.fields.slug} to={`/${post.fields.slug}`}>
                     <Img
-                      fluid={post.frontmatter.mainImage.childImageSharp.fluid}
+                      fluid={post.frontmatter.onNewsPage.childImageSharp.fluid}
                     />
                     <div className="article-content">
                       <h2>{post.frontmatter.title}</h2>
