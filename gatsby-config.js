@@ -10,6 +10,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-loadable-components-ssr",
     {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, // Print removed selectors and processed file names
+        develop: true, // Enable while using `gatsby develop`
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Nunito\:400,700`],
