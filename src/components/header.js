@@ -24,7 +24,7 @@ const Header = () => {
             </Link>
           </div>
           <div id="center">
-            <Link to="/">
+            <Link alt="Länk till startisdan" to="/">
               <Logo />
             </Link>
           </div>

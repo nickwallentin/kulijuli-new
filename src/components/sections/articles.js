@@ -11,7 +11,10 @@ const SectionArticles = () => {
       <h2>Senaste inläggen</h2>
       <ArticlesLayout>
         <div className="latest">
-          <Link to={posts[0].node.fields.slug}>
+          <Link
+            to={posts[0].node.fields.slug}
+            alt={"Läs artikeln: " + posts[0].node.frontmatter.title}
+          >
             <article className="latest">
               <Img
                 fluid={
@@ -28,7 +31,11 @@ const SectionArticles = () => {
           {posts.map(({ node: post }, index) => {
             if (index !== 0) {
               return (
-                <Link key={post.id} to={post.fields.slug}>
+                <Link
+                  key={post.id}
+                  to={post.fields.slug}
+                  alt={"Läs artikeln: " + post.node.frontmatter.title}
+                >
                   <article>
                     <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
                     <div className="article-content">
