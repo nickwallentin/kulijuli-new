@@ -62,11 +62,7 @@ const IndexPage = () => {
           <SectionArticles />
         </Wrap>
       </Section>
-      <Section>
-        <Wrap>
-          <SectionLatestPodcast />
-        </Wrap>
-      </Section>
+
       <Section>
         <Wrap>
           <SectionSocialCalls />
