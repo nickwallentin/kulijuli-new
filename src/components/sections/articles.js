@@ -34,7 +34,7 @@ const SectionArticles = () => {
                 <Link
                   key={post.id}
                   to={post.fields.slug}
-                  alt={"Läs artikeln: " + post.node.frontmatter.title}
+                  alt={"Läs artikeln: " + post.frontmatter.title}
                 >
                   <article>
                     <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
