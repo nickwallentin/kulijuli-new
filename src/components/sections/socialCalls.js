@@ -16,7 +16,7 @@ const SectionSocialCalls = () => {
           className="instagram"
         >
           <InstagramIcon />
-          <h4>Följ oss på Instagram</h4>
+          <h3>Följ oss på Instagram</h3>
           <p>Följ med Kulijuli bakom rampljuset.</p>
         </a>
         <a
@@ -26,7 +26,7 @@ const SectionSocialCalls = () => {
           className="facebook"
         >
           <FacebookIcon />
-          <h4>Följ oss på Facebook</h4>
+          <h3>Följ oss på Facebook</h3>
           <p>Se exklusivt innehåll från Kulijuli.</p>
         </a>
       </SocialBlocks>
