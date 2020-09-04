@@ -6,7 +6,9 @@ const SectionLatestPodcast = () => {
   return (
     <React.Fragment>
       <h2>Senaste podcastavsnittet</h2>
-      <LatestPodcast />
+      <React.Suspense fallback={<div>Loading</div>}>
+        <LatestPodcast />
+      </React.Suspense>
     </React.Fragment>
   )
 }
