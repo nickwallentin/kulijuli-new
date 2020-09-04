@@ -19,8 +19,8 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
               Kulijulipodden <span>Lyssna på senaste avsnittet</span>
             </h1>
             <div className="latest-podcast">
-              <LatestPodcast />
-
+              {/*<LatestPodcast />*/}
+              test
               <div className="sponsor">
                 Podcasten sponsras av: <br />
                 {"<sponsorlogga>"}
