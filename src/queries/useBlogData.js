@@ -22,28 +22,28 @@ export default function useBlogData() {
               largeThumb: mainImage {
                 childImageSharp {
                   fluid(maxWidth: 320, maxHeight: 176) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
               thumb: mainImage {
                 childImageSharp {
                   fluid(maxWidth: 150, maxHeight: 150) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
               mainOnNewsPage: mainImage {
                 childImageSharp {
                   fluid(maxWidth: 600) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
               onNewsPage: mainImage {
                 childImageSharp {
                   fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
