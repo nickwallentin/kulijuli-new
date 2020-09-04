@@ -3,12 +3,15 @@ import loadable from "@loadable/component"
 const LatestPodcast = loadable(() => import("../latestPodcastiFrame"))
 
 const SectionLatestPodcast = () => {
+  const isSSR = typeof window === "undefined"
   return (
     <React.Fragment>
       <h2>Senaste podcastavsnittet</h2>
-      <React.Suspense fallback={<div>Loading</div>}>
-        <LatestPodcast />
-      </React.Suspense>
+      {!isSSR && (
+        <React.Suspense fallback={<div>Loading</div>}>
+          <LatestPodcast />
+        </React.Suspense>
+      )}
     </React.Fragment>
   )
 }

@@ -10,6 +10,7 @@ const LatestPodcast = loadable(() =>
 )
 
 const PageLayout = ({ children, setTab, tabIndex }) => {
+  const isSSR = typeof window === "undefined"
   return (
     <Layout>
       <Section space="30px 0px 0px 0px">
@@ -19,9 +20,11 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
               Kulijulipodden <span>Lyssna på senaste avsnittet</span>
             </h1>
             <div className="latest-podcast">
-              <React.Suspense fallback={<div>Loading</div>}>
-                <LatestPodcast />
-              </React.Suspense>
+              {!isSSR && (
+                <React.Suspense fallback={<div>Loading</div>}>
+                  <LatestPodcast />
+                </React.Suspense>
+              )}
               <div className="sponsor">
                 Podcasten sponsras av: <br />
                 {"<sponsorlogga>"}
