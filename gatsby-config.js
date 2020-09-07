@@ -8,6 +8,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-preact`,
     "gatsby-plugin-loadable-components-ssr",
     {
       resolve: `gatsby-plugin-purgecss`,
