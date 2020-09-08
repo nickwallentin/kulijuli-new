@@ -53,6 +53,9 @@ const SocialBlocks = styled.div`
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+    h3 {
+      margin-bottom: 5px;
+    }
 
     &:hover {
       svg {
