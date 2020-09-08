@@ -2,6 +2,7 @@ import React from "react"
 import loadable from "@loadable/component"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Loading from "../../components/loading"
 
 import Layout from "../../components/layout"
 import { Section, Wrap } from "../../components/styled"
@@ -21,7 +22,7 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
             </h1>
             <div className="latest-podcast">
               {!isSSR && (
-                <React.Suspense fallback={<div>Loading</div>}>
+                <React.Suspense fallback={<Loading />}>
                   <LatestPodcast />
                 </React.Suspense>
               )}
