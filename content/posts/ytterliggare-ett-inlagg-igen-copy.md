@@ -1,7 +1,7 @@
 ---
 date: 2020-08-20T10:41:47.000+00:00
 mainImage: "/content/images/xps-dyaf-8utfn8-unsplash.jpg"
-title: Provar Gatsby Cache på Netlify
+title: Provar såklart Gatsby Cache på Netlify
 public: true
 
 ---
