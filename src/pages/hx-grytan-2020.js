@@ -70,10 +70,9 @@ const HxPage = () => {
             >
               <h2>Kulijuli + Hx-Festivalen = Hx-Grytan.</h2>
               <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean.
+                Hx-Grytan är ett arrangemang som kombinerar det bästa av två
+                världar. Nämligen ett evenemang under Hx-Festivalen, som bjuder
+                på en Kulijulispecial, med pärlor från sommarens allsångsfest.
               </p>
             </div>
           </Grid>
@@ -87,10 +86,12 @@ const HxPage = () => {
             >
               <h2>Hx-Grytan sändes live för första gången.</h2>
               <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean.
+                Den 31 juli, 2020, tog Hx-Festivalen form som ett online-event,
+                med Hx-Grytan som ett av de mest populära inslagen. I den
+                tillfälliga "TV-studion” gästades vi av Glenn Borgkvist, Anna
+                Pauline, Maja Gullstrand , Johan Östberg, Kathleen Lorenzen, Kim
+                Bergkvist och Andreas Eldeen. Även Kulijuli-legendaren Olle
+                Larsson var på plats och välsignade eventet med sin närvaro.
               </p>
             </div>
             <Img
