@@ -25,7 +25,7 @@ const PodcastPage = () => {
                     Kulijuli-podden leds av programvärdarna Dennis Westerberg
                     och Lena Bergkvist, och bjuder på spännande samtal,
                     med fokus på musik, upplevelser och personliga
-                    livsberättelser
+                    livsberättelser.
                   </p>
                 </div>
               </div>

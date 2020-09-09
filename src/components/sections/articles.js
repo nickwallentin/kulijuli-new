@@ -21,8 +21,9 @@ const SectionArticles = () => {
                   posts[0].node.frontmatter.largeThumb.childImageSharp.fluid
                 }
               />
-              <small>{posts[0].node.frontmatter.date}</small>
+
               <h3>{posts[0].node.frontmatter.title}</h3>
+              <small>{posts[0].node.frontmatter.date}</small>
               <p>{posts[0].node.excerpt}</p>
             </article>
           </Link>
@@ -39,9 +40,8 @@ const SectionArticles = () => {
                   <article>
                     <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
                     <div className="article-content">
-                      <small>{post.frontmatter.date}</small>
                       <h3>{post.frontmatter.title}</h3>
-
+                      <small>{post.frontmatter.date}</small>
                       <p>{post.excerpt}</p>
                     </div>
                   </article>
@@ -76,10 +76,10 @@ const ArticlesLayout = styled.div`
     article {
       small {
         display: block;
-        margin: 15px 0px 5px 0px;
+        margin: 5px 0px 15px 0px;
       }
       h3 {
-        margin: 0px 0px 15px 0px;
+        margin: 15px 0px 5px 0px;
       }
     }
   }
@@ -96,7 +96,12 @@ const ArticlesLayout = styled.div`
       grid-template-columns: 1fr 1fr;
       h3 {
         font-size: 1rem;
-        margin: 0px 0px 10px 0px;
+        margin: 0px 0px 5px 0px;
+      }
+      small {
+        line-height: 0.8rem;
+        margin-bottom: 10px;
+        display: block;
       }
       p {
         margin-bottom: 0px;
