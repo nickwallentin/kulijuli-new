@@ -20,7 +20,7 @@ const IndexPage = () => {
         edges {
           node {
             id
-            childImageSharp {
+            large: childImageSharp {
               fluid(maxWidth: 500) {
                 ...GatsbyImageSharpFluid_withWebp
               }
@@ -43,16 +43,18 @@ const IndexPage = () => {
               <div className="button">Läs mer</div>
               <Img
                 className="backdrop"
-                fluid={images.allFile.edges[0].node.childImageSharp.fluid}
+                fluid={images.allFile.edges[0].node.large.fluid}
               />
             </ContentBlockOne>
             <ContentBlockTwo to="/podcast">
-              <h2>
+              <h2 style={{ zIndex: "2" }}>
                 <span>Kulijulipodden</span>
                 Skånes bästa podcast
               </h2>
 
-              <div className="button">Lyssna nu</div>
+              <div style={{ zIndex: "2" }} className="button">
+                Lyssna nu
+              </div>
             </ContentBlockTwo>
           </Grid>
         </Wrap>
@@ -79,7 +81,7 @@ const IndexPage = () => {
 export default IndexPage
 
 const ContentBlockOne = styled(Link)`
-  height: 400px;
+  height: 300px;
   position: relative;
   border-radius: 5px;
   padding: 30px;
@@ -92,7 +94,7 @@ const ContentBlockOne = styled(Link)`
 
   .button {
     display: flex;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border-radius: 4px;
     text-align: center;
     text-decoration: none;
@@ -124,7 +126,7 @@ const ContentBlockOne = styled(Link)`
   }
 `
 const ContentBlockTwo = styled(Link)`
-  height: 400px;
+  height: 300px;
   position: relative;
   border-radius: 5px;
   padding: 30px;
@@ -135,9 +137,11 @@ const ContentBlockTwo = styled(Link)`
   color: inherit;
   background: var(--c-sec);
 
+  overflow: hidden;
+
   .button {
     display: flex;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border-radius: 4px;
     text-align: center;
     text-decoration: none;

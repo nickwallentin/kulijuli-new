@@ -16,12 +16,9 @@ const PodcastPage = () => {
         bg="linear-gradient(0deg, rgba(244,244,244,1) 0%, rgba(255,255,255,1) 100%)"
       >
         <Wrap>
-          {tabIndex === 0 ? (
+          {tabIndex === 1 ? (
             <React.Fragment>
-              <Grid style={{ marginBottom: "2rem" }} cols="1fr 2fr">
-                <div>
-                  <figure>img</figure>
-                </div>
+              <div style={{ marginBottom: "2rem" }}>
                 <div>
                   <h2>Programvärdar</h2>
                   <p>
@@ -31,8 +28,8 @@ const PodcastPage = () => {
                     livsberättelser
                   </p>
                 </div>
-              </Grid>
-              <Grid style={{ marginBottom: "2rem" }} cols="2fr 1fr">
+              </div>
+              <div style={{ marginBottom: "2rem" }}>
                 <div>
                   <h2>Glädje och samhörighet</h2>
                   <p>
@@ -41,14 +38,8 @@ const PodcastPage = () => {
                     blandning av det lokala, det regionala och det nationella.
                   </p>
                 </div>
-                <div>
-                  <figure>img</figure>
-                </div>
-              </Grid>
-              <Grid style={{ marginBottom: "2rem" }} cols="1fr 2fr">
-                <div>
-                  <figure>img</figure>
-                </div>
+              </div>
+              <div style={{ marginBottom: "2rem" }} cols="1fr">
                 <div>
                   <h2>Nytt avsnitt varannan vecka</h2>
                   <p>
@@ -60,7 +51,7 @@ const PodcastPage = () => {
                     Podcaster).
                   </p>
                 </div>
-              </Grid>
+              </div>
             </React.Fragment>
           ) : (
             <React.Fragment>

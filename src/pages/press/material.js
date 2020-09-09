@@ -47,7 +47,7 @@ const PressMaterialPage = () => {
           <Download>
             <h3>Logotyper</h3>
             <a
-              href="https://www.dropbox.com/sh/7xre8edesl8ecn9/AAA6NodlmY6zMQWxwCFiGiGQa?dl=0"
+              href="https://www.dropbox.com/sh/oi6qen6m7rixpoy/AADfHAI5ioQwDakQTM8lBAopa?dl=0"
               target="_blank"
               rel="noopener noreferrer"
               className="button"
@@ -58,7 +58,7 @@ const PressMaterialPage = () => {
           <Download>
             <h3>Pressbilder</h3>
             <a
-              href="https://www.dropbox.com/sh/gzrxor643qyxwo3/AAAHFjCKXcJ5n1J2P76HId9ta?dl=0"
+              href="https://www.dropbox.com/sh/oi6qen6m7rixpoy/AADfHAI5ioQwDakQTM8lBAopa?dl=0"
               target="_blank"
               rel="noopener noreferrer"
               className="button"

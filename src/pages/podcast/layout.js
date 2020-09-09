@@ -35,11 +35,13 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
           <PageNav>
             <li onClick={() => setTab(0)}>
               <Link className={tabIndex === 0 ? "active" : null}>
-                Om podden
+                Alla avsnitt
               </Link>
             </li>
             <li onClick={() => setTab(1)}>
-              <Link className={tabIndex === 1 ? "active" : null}>Avsnitt</Link>
+              <Link className={tabIndex === 1 ? "active" : null}>
+                Om podden
+              </Link>
             </li>
           </PageNav>
         </Wrap>
