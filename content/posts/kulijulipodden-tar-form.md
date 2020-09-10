@@ -1,6 +1,6 @@
 ---
 date: 2020-09-10T09:30:53Z
-mainImage: "/content/images/kij_podcast_cover.jpg"
+mainImage: "/content/images/kij_podcast_cover_2.jpg"
 title: Kulijulipodden tar form
 public: true
 
