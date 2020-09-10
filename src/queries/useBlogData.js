@@ -6,7 +6,6 @@ export default function useBlogData() {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/(posts)/" } }
         sort: { order: DESC, fields: frontmatter___date }
-        limit: 5
       ) {
         edges {
           node {

@@ -30,7 +30,7 @@ const SectionArticles = () => {
         </div>
         <div className="posts">
           {posts.map(({ node: post }, index) => {
-            if (index !== 0) {
+            if (index !== 0 && index < 5) {
               return (
                 <Link
                   key={post.id}
