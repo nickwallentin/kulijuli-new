@@ -27,8 +27,5 @@ fields:
   default: now
   label: Datum
 pages:
-- content/posts/har-ar-fjarde-inlagget.md
 - content/posts/manga-lovord-efter-hx-grytan-online.md
-- content/posts/senaste-inlagget-just-nu-i-alla-fall.md
 - content/posts/ytterliggare-ett-inlagg-igen-copy.md
-- content/posts/ytterliggare-ett-inlagg-igen.md
