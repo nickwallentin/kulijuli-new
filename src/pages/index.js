@@ -69,11 +69,13 @@ const IndexPage = () => {
           <SectionSocialCalls />
         </Wrap>
       </Section>
+      {/* 
       <Section>
         <Wrap>
           <SectionSponsors />
         </Wrap>
       </Section>
+      */}
     </Layout>
   )
 }
