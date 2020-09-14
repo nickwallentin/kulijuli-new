@@ -49,7 +49,7 @@ const IndexPage = () => {
             <ContentBlockTwo to="/podcast">
               <h2 style={{ zIndex: "2" }}>
                 <span>Kulijulipodden</span>
-                Skånes bästa podcast
+                Skånes trevligaste podcast
               </h2>
 
               <div style={{ zIndex: "2" }} className="button">

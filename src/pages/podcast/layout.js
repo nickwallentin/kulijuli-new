@@ -21,15 +21,17 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
               Kulijulipodden <span>Lyssna på senaste avsnittet</span>
             </h1>
             <div className="latest-podcast">
-              {!isSSR && (
+              <h2>Första avsnittet släpps den 6 oktober, 2020</h2>
+              {/* !isSSR && (
                 <React.Suspense fallback={<Loading />}>
                   <LatestPodcast />
                 </React.Suspense>
-              )}
+              ) */}
+              {/*
               <div className="sponsor">
                 Podcasten sponsras av: <br />
                 {"<sponsorlogga>"}
-              </div>
+              </div> */}
             </div>
           </Hero>
           <PageNav>
