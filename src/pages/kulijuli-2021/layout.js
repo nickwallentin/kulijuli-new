@@ -31,7 +31,7 @@ const PageLayout = ({ children }) => {
             <h1 style={{ maxWidth: "500px" }}>
               <span>Kulijuli 2021</span> Skånes största allsångsevenemang
             </h1>
-            <a href="#" className="button">
+            <a href="#" className="button disabled">
               Köp biljetter
             </a>
             <Img
@@ -80,6 +80,10 @@ const Hero = styled.div`
     border-radius: 4px;
     font-weight: 700;
     align-self: flex-start;
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
   .latest-podcast {
     max-width: 560px;
