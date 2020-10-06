@@ -1,12 +1,14 @@
 import React, { useState } from "react"
-
+import usePodcastData from "../../queries/usePodcastData"
 import PageLayout from "./layout"
 import SEO from "../../components/seo"
+import Episode from "../../components/podcastEpisode"
 
 import { Wrap, Section, Grid } from "../../components/styled"
 
 const PodcastPage = () => {
   const [tabIndex, setTabIndex] = useState(0)
+  const episodes = usePodcastData()
   return (
     <PageLayout setTab={setTabIndex} tabIndex={tabIndex}>
       <SEO title="Kulijulipodden" />
@@ -56,7 +58,9 @@ const PodcastPage = () => {
           ) : (
             <React.Fragment>
               <h2>Alla avsnitt</h2>
-              <p>Kommer snart</p>
+              {episodes.map(({ node: episode }) => {
+                return <Episode episode={episode} />
+              })}
             </React.Fragment>
           )}
         </Wrap>
