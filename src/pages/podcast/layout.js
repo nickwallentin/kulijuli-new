@@ -79,7 +79,7 @@ const Hero = styled.div`
     align-items: center;
 
     .gatsby-image-wrapper {
-      max-width: 200px;
+      max-width: 120px;
       width: 100%;
       margin-top: 20px;
     }
