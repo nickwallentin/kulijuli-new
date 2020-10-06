@@ -22,5 +22,15 @@ fields:
   config:
     maxSize: 64
   label: Sponsor Logotyp
+- name: guests
+  type: text
+  config:
+    required: false
+  label: Gäster
+- name: competitionWinner
+  type: text
+  config:
+    required: false
+  label: Vinnare av tävling
 pages:
 - 'content/podcast/E001: Premiärprogrammet.md'
