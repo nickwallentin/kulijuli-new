@@ -3,7 +3,7 @@ const LatestPodcastiFrame = () => {
   return (
     <iframe
       title="Senaste kulijulipodden på Spotify"
-      src="https://open.spotify.com/embed-podcast/show/5bkofphbE7YjGZSdPWj9x0"
+      src="https://open.spotify.com/embed-podcast/show/4UFNkxgsLAAmYvJvpLdHv8"
       width="100%"
       height="232"
       frameborder="0"

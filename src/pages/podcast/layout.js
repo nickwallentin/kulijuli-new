@@ -2,7 +2,9 @@ import React from "react"
 import loadable from "@loadable/component"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 import Loading from "../../components/loading"
+import useEpisodeSponsorData from "../../queries/useEpisodeSponsorData"
 
 import Layout from "../../components/layout"
 import { Section, Wrap } from "../../components/styled"
@@ -12,6 +14,8 @@ const LatestPodcast = loadable(() =>
 
 const PageLayout = ({ children, setTab, tabIndex }) => {
   const isSSR = typeof window === "undefined"
+  const sponsor = useEpisodeSponsorData()
+  console.log(sponsor)
   return (
     <Layout>
       <Section space="30px 0px 0px 0px">
@@ -21,17 +25,16 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
               Kulijulipodden <span>Lyssna på senaste avsnittet</span>
             </h1>
             <div className="latest-podcast">
-              <h2>Första avsnittet släpps den 6 oktober, 2020</h2>
-              {/* !isSSR && (
+              {!isSSR && (
                 <React.Suspense fallback={<Loading />}>
                   <LatestPodcast />
                 </React.Suspense>
-              ) */}
-              {/*
+              )}
+
               <div className="sponsor">
-                Podcasten sponsras av: <br />
-                {"<sponsorlogga>"}
-              </div> */}
+                Avsnittet sponsras av: <br />
+                <Img fluid={sponsor.childImageSharp.fluid} />
+              </div>
             </div>
           </Hero>
           <PageNav>
@@ -69,6 +72,17 @@ const Hero = styled.div`
   .latest-podcast {
     max-width: 600px;
     margin: 0 auto;
+  }
+  .sponsor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .gatsby-image-wrapper {
+      max-width: 200px;
+      width: 100%;
+      margin-top: 20px;
+    }
   }
   h1 {
     span {
