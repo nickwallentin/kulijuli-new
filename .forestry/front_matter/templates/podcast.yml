@@ -32,5 +32,10 @@ fields:
   config:
     required: false
   label: Vinnare av tävling
+- name: mentions
+  type: text
+  config:
+    required: false
+  label: Omnämnanden
 pages:
 - 'content/podcast/E001: Premiärprogrammet.md'
