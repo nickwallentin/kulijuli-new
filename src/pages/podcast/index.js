@@ -3,6 +3,7 @@ import usePodcastData from "../../queries/usePodcastData"
 import PageLayout from "./layout"
 import SEO from "../../components/seo"
 import Episode from "../../components/podcastEpisode"
+import styled from "styled-components"
 
 import { Wrap, Section, Grid } from "../../components/styled"
 

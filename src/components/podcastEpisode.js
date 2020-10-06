@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 import { Grid } from "../components/styled"
 
 const Episode = ({ episode }) => {
+  const [readMore, setReadMore] = useState(false)
   const podcastUrl = episode.frontmatter.spotify_url.split(":")[2]
   console.log(podcastUrl)
   return (
@@ -19,15 +20,39 @@ const Episode = ({ episode }) => {
         ></iframe>
         <div className="podcast-meta">
           <dl>
-            <dt>Avsnittets sponsor</dt>
-            <dd>{episode.frontmatter.sponsorName}</dd>
             <dt>Gäster</dt>
             <dd>{episode.frontmatter.guests}</dd>
             <dt>Vinnare av tävling</dt>
             <dd>{episode.frontmatter.competitionWinner}</dd>
+            <dt>Avsnittets sponsor</dt>
+            <dd>{episode.frontmatter.sponsorName}</dd>
           </dl>
+          <p
+            style={{
+              padding: "5px 16px",
+              background: "#00000015",
+              display: "inline-block",
+              borderRadius: "4px",
+              cursor: "pointer",
+            }}
+            onClick={() => setReadMore(prev => !prev)}
+          >
+            {readMore ? "Visa mindre" : "Visa mer"}
+          </p>
         </div>
       </Grid>
+      {readMore && (
+        <div className="content">
+          <div
+            className="text"
+            dangerouslySetInnerHTML={{ __html: episode.html }}
+          ></div>
+          <p>
+            <strong>Omnämnanden: </strong>
+            {episode.frontmatter.mentions}
+          </p>
+        </div>
+      )}
     </EpisodeContainer>
   )
 }
@@ -43,7 +68,7 @@ const EpisodeContainer = styled.div`
     }
     dd {
       margin-left: 0px;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
   }
 `

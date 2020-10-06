@@ -25,6 +25,7 @@ export default function usePodcastData() {
               }
               guests
               competitionWinner
+              mentions
             }
           }
         }
