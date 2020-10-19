@@ -20,12 +20,19 @@ const Episode = ({ episode }) => {
         ></iframe>
         <div className="podcast-meta">
           <dl>
+          {episode.frontmatter.guests && (
+            <React.Fragment>
             <dt>Gäster</dt>
             <dd>{episode.frontmatter.guests}</dd>
-            <dt>Vinnare av tävling</dt>
-            <dd>{episode.frontmatter.competitionWinner}</dd>
-            <dt>Avsnittets sponsor</dt>
-            <dd>{episode.frontmatter.sponsorName}</dd>
+            </React.Fragment>)}
+            {episode.frontmatter.competitionWinner && (
+<React.Fragment><dt>Vinnare av tävling</dt>
+<dd>{episode.frontmatter.competitionWinner}</dd></React.Fragment>
+            )}
+            
+            {episode.frontmatter.sponsorName && (<React.Fragment><dt>Avsnittets sponsor</dt>
+              <dd>{episode.frontmatter.sponsorName}</dd></React.Fragment>)}
+            
           </dl>
           <p
             style={{
@@ -48,8 +55,9 @@ const Episode = ({ episode }) => {
             dangerouslySetInnerHTML={{ __html: episode.html }}
           ></div>
           <p>
-            <strong>Omnämnanden: </strong>
-            {episode.frontmatter.mentions}
+          {episode.frontmatter.mentions && (<React.Fragment><strong>Omnämnanden: </strong>
+            {episode.frontmatter.mentions}</React.Fragment>)}
+            
           </p>
         </div>
       )}
