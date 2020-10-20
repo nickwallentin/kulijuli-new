@@ -31,10 +31,10 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
                 </React.Suspense>
               )}
 
-              <div className="sponsor">
+              {/*<div className="sponsor">
                 Avsnittet sponsras av: <br />
                 <Img fluid={sponsor.childImageSharp.fluid} />
-              </div>
+              </div>*/}
             </div>
           </Hero>
           <PageNav>
