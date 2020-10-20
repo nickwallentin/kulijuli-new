@@ -3,7 +3,7 @@ episode: "2"
 spotify_url: spotify:episode:4Luvht94hsGrp0HCGwRHex
 sponsorName: ''
 sponsorLogo: ''
-guests: Stefan Lindqvist & Anna Pauline
+guests: Stefan Lindqvist, Anna Pauline
 competitionWinner: ''
 mentions: ''
 
