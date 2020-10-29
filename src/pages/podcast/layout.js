@@ -7,6 +7,8 @@ import Loading from "../../components/loading"
 import useEpisodeSponsorData from "../../queries/useEpisodeSponsorData"
 
 import Layout from "../../components/layout"
+import SpotifyIcon from "../../assets/spotify.svg"
+import ApplePodcastIcon from "../../assets/podcast.svg"
 import { Section, Wrap } from "../../components/styled"
 const LatestPodcast = loadable(() =>
   import("../../components/latestPodcastiFrame")
@@ -31,10 +33,24 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
                 </React.Suspense>
               )}
 
-              {/*<div className="sponsor">
-                Avsnittet sponsras av: <br />
-                <Img fluid={sponsor.childImageSharp.fluid} />
-              </div>*/}
+              <div className="sources">
+                <div className="links">
+                  <a
+                    href="https://open.spotify.com/show/4UFNkxgsLAAmYvJvpLdHv8?si=xsLNhfphRWe4KlvwyypK8w"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SpotifyIcon /> Lyssna på Spotify
+                  </a>
+                  <a
+                    href="https://podcasts.apple.com/se/podcast/kulijulipodden/id1534424603"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ApplePodcastIcon /> Lyssna på Apple Podcasts
+                  </a>
+                </div>
+              </div>
             </div>
           </Hero>
           <PageNav>
@@ -72,6 +88,27 @@ const Hero = styled.div`
   .latest-podcast {
     max-width: 600px;
     margin: 0 auto;
+  }
+  .sources {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .links {
+      display: flex;
+      a {
+        display: flex;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+        margin: 10px;
+        svg {
+          margin-right: 5px;
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
   }
   .sponsor {
     display: flex;
