@@ -93,7 +93,9 @@ const PodcastPage = () => {
               </span>
             </div>
             <div className="popup-content">
+              <span>Utgiven: {popupContent.data.Utgiven}</span>
               <h3>{popupContent.data.Rubrik}</h3>
+
               <p>{popupContent.data.Beskrivning}</p>
               <dl className="popup-meta">
                 <Grid>
