@@ -156,6 +156,7 @@ const Popup = styled.div`
   background: white;
   border-radius: 5px;
   overflow-y: scroll;
+  z-index: 999;
 
   & > div {
     padding: 2rem;
@@ -172,6 +173,7 @@ const Popup = styled.div`
   }
 `
 const Overlay = styled.div`
+  z-index: 998;
   position: fixed;
   top: 0px;
   left: 0px;
