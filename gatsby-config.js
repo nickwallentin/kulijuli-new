@@ -1,10 +1,14 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Kulijuli - Skånes största allsångsevenemang`,
     description: `Kulijuli är en höjdpunkt för många skåningar, både äldre och yngre. Under Juli månad så bjuds det på folkkära artister, allsång och trevliga inslag på Nöjesgrytan i Helsingborg.`,
     author: `@nickwallentin`,
     defaultImage: `/images/kulijuli_web_image.png`,
-    siteUrl: `https://relaxed-meitner-54e2c5.netlify.app`,
+    siteUrl: `https://www.kulijuli.se`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -57,6 +61,25 @@ module.exports = {
       options: {
         name: "images",
         path: `${__dirname}/content/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `${process.env.AIRTABLE_API_KEY}`, // may instead specify via env, see below
+        concurrency: 5, // default, see using markdown and attachments for more information
+        tables: [
+          {
+            baseId: `appm85LyX225thUvR`,
+            tableName: `Avsnitt`,
+            tableView: `Publicerade`,
+            tableLinks: [`Gäster`],
+          },
+          {
+            baseId: `appm85LyX225thUvR`,
+            tableName: `Gäster`,
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,
