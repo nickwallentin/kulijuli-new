@@ -79,6 +79,22 @@ module.exports = {
             baseId: `appm85LyX225thUvR`,
             tableName: `Gäster`,
           },
+          {
+            baseId: `app1kIWnk1iD58izy`,
+            tableName: `Datum`,
+            mapping: {
+              Bild: `fileNode`,
+            },
+            tableLinks: [`Program`],
+          },
+          {
+            baseId: `app1kIWnk1iD58izy`,
+            tableName: `Program`,
+            mapping: {
+              Bild: `fileNode`,
+            },
+            tableLinks: [`Datum`],
+          },
         ],
       },
     },

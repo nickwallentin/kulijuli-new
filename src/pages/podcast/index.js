@@ -1,13 +1,12 @@
+import { Grid, Section, Wrap } from "../../components/styled"
 import React, { useState } from "react"
-import usePodcastEpisodes from "../../queries/usePodcastEpisodes"
-import PageLayout from "./layout"
-import SEO from "../../components/seo"
-import Episode from "../../components/podcastEpisode"
-import styled from "styled-components"
-
-import { Wrap, Section, Grid } from "../../components/styled"
 
 import CloseIcon from "../../assets/closeMenu.svg"
+import Episode from "../../components/podcastEpisode"
+import PageLayout from "./layout"
+import SEO from "../../components/seo"
+import styled from "styled-components"
+import usePodcastEpisodes from "../../queries/usePodcastEpisodes"
 
 const PodcastPage = () => {
   const [tabIndex, setTabIndex] = useState(0)
@@ -35,7 +34,7 @@ const PodcastPage = () => {
         bg="linear-gradient(0deg, rgba(244,244,244,1) 0%, rgba(255,255,255,1) 100%)"
       >
         <Wrap>
-          {tabIndex === 1 ? (
+          {tabIndex === 0 ? (
             <React.Fragment>
               <div style={{ marginBottom: "2rem" }}>
                 <div>
@@ -72,14 +71,7 @@ const PodcastPage = () => {
                 </div>
               </div>
             </React.Fragment>
-          ) : (
-            <React.Fragment>
-              <h2>Alla avsnitt</h2>
-              {episodes.map(({ node: episode }) => {
-                return <Episode showMore={handlePopup} episode={episode} />
-              })}
-            </React.Fragment>
-          )}
+          ) : null}
         </Wrap>
       </Section>
       {popup && (

@@ -1,15 +1,16 @@
+import { Section, Wrap } from "../../components/styled"
+
+import ApplePodcastIcon from "../../assets/podcast.svg"
+import Img from "gatsby-image"
+import Layout from "../../components/layout"
+import { Link } from "gatsby"
+import Loading from "../../components/loading"
 import React from "react"
+import SpotifyIcon from "../../assets/spotify.svg"
 import loadable from "@loadable/component"
 import styled from "styled-components"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
-import Loading from "../../components/loading"
 import useEpisodeSponsorData from "../../queries/useEpisodeSponsorData"
 
-import Layout from "../../components/layout"
-import SpotifyIcon from "../../assets/spotify.svg"
-import ApplePodcastIcon from "../../assets/podcast.svg"
-import { Section, Wrap } from "../../components/styled"
 const LatestPodcast = loadable(() =>
   import("../../components/latestPodcastiFrame")
 )
@@ -54,13 +55,13 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
             </div>
           </Hero>
           <PageNav>
-            <li onClick={() => setTab(0)}>
-              <Link className={tabIndex === 0 ? "active" : null}>
+            {/*<li onClick={() => setTab(1)}>
+              <Link className={tabIndex === 1 ? "active" : null}>
                 Alla avsnitt
               </Link>
-            </li>
-            <li onClick={() => setTab(1)}>
-              <Link className={tabIndex === 1 ? "active" : null}>
+            </li> */}
+            <li onClick={() => setTab(0)}>
+              <Link className={tabIndex === 0 ? "active" : null}>
                 Om podden
               </Link>
             </li>

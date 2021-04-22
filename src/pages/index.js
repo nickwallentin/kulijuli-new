@@ -1,17 +1,15 @@
-import React from "react"
-import styled from "styled-components"
+import { Grid, Section, Wrap } from "../components/styled"
 import { Link, graphql, useStaticQuery } from "gatsby"
+
 import Img from "gatsby-image"
-
 import Layout from "../components/layout"
+import React from "react"
 import SEO from "../components/seo"
-
-import { Wrap, Section, Grid } from "../components/styled"
-
 import SectionArticles from "../components/sections/articles"
 import SectionLatestPodcast from "../components/sections/latestPodcast"
 import SectionSocialCalls from "../components/sections/socialCalls"
 import SectionSponsors from "../components/sections/sponsors"
+import styled from "styled-components"
 
 const IndexPage = () => {
   const images = useStaticQuery(graphql`
@@ -32,7 +30,7 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <SEO title="Kulijuli - Skånes största allsångsevenemang" />
+      <SEO title="Skånes största allsångsevenemang" />
       <Section>
         <Wrap>
           <Grid cols="2fr 1fr">
