@@ -95,6 +95,14 @@ module.exports = {
             },
             tableLinks: [`Datum`],
           },
+          {
+            baseId: `appH03qFrWSkrnsH6`,
+            tableName: `Sponsorer`,
+            tableView: `Hemsida`,
+            mapping: {
+              Logo: `fileNode`,
+            },
+          },
         ],
       },
     },
