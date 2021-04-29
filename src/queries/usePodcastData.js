@@ -14,7 +14,7 @@ export default function usePodcastData() {
             excerpt(pruneLength: 150)
             frontmatter {
               episode
-              spotify_url
+
               sponsorName
               sponsorLogo {
                 childImageSharp {

@@ -16,7 +16,7 @@ const usePodcastEpisodes = () => {
               Rubrik
               Beskrivning
               Omn_mnda
-              spotifyUrl
+              spotifyURL
               Sponsor
               L_tar
               G_ster {

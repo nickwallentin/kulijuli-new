@@ -61,7 +61,10 @@ const PageLayout = ({ children, setTab, tabIndex }) => {
               </Link>
             </li> */}
             <li onClick={() => setTab(0)}>
-              <Link className={tabIndex === 0 ? "active" : null}>
+              <Link className={tabIndex === 0 ? "active" : null}>Avsnitt</Link>
+            </li>
+            <li onClick={() => setTab(1)}>
+              <Link className={tabIndex === 1 ? "active" : null}>
                 Om podden
               </Link>
             </li>
