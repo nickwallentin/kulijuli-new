@@ -52,6 +52,9 @@ const EpisodeContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    p {
+      margin: 0px;
+    }
   }
 
   .podcast-info {
