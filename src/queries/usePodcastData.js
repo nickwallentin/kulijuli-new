@@ -14,7 +14,6 @@ export default function usePodcastData() {
             excerpt(pruneLength: 150)
             frontmatter {
               episode
-
               sponsorName
               sponsorLogo {
                 childImageSharp {
