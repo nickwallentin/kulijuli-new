@@ -9,9 +9,21 @@ import React from "react"
 import dayjs from "dayjs"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import useProgamSettings from "../queries/useProgramSettings"
 
 const ProgramPage = ({ data }) => {
   const program = data.allAirtable.edges
+  const settings = useProgamSettings()
+  let isPublic = false
+  settings.map(({ node: setting }) => {
+    if (setting.data.Name === "Visa program") {
+      if (setting.data.Aktiv) {
+        isPublic = true
+      }
+    }
+  })
+  console.log("Is public", isPublic)
+
   return (
     <Layout>
       <Styles>
@@ -22,9 +34,13 @@ const ProgramPage = ({ data }) => {
         </Section>
         <Section>
           <Wrap>
-            {program.map(day => {
-              return <ProgramDay day={day} />
-            })}
+            {isPublic ? (
+              program.map(day => {
+                return <ProgramDay day={day} />
+              })
+            ) : (
+              <p>Programmet kommer snart.</p>
+            )}
           </Wrap>
         </Section>
       </Styles>
@@ -145,6 +161,12 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+    airtable(table: { eq: "Inställningar" }) {
+      data {
+        Namn
+        Aktiv
       }
     }
   }

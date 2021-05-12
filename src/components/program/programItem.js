@@ -8,11 +8,11 @@ const ProgramItem = ({ item }) => {
   return (
     <li style={{ cursor: "pointer" }} key={item.data.Programpunkt}>
       <figure onClick={() => setIsOpen(true)}>
-        <Img fluid={item.data.Bild.localFiles[0].childImageSharp.fluid} />{" "}
+        <Img fluid={item?.data?.Bild?.localFiles[0].childImageSharp.fluid} />{" "}
       </figure>
       <div className="info" onClick={() => setIsOpen(true)}>
         <strong>{item.data.Programpunkt}</strong>
-        <p>{item.data.Beskrivning.substring(0, 25)}...</p>
+        <p>{item?.data?.Beskrivning?.substring(0, 25)}...</p>
       </div>
       {isOpen && (
         <React.Fragment>
@@ -21,7 +21,7 @@ const ProgramItem = ({ item }) => {
             <div className="modal-container">
               <figure>
                 <Img
-                  fluid={item.data.Large.localFiles[0].childImageSharp.fluid}
+                  fluid={item?.data?.Large?.localFiles[0].childImageSharp.fluid}
                 />
               </figure>
               <div className="content">

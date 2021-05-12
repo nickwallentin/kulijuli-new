@@ -96,6 +96,10 @@ module.exports = {
             tableLinks: [`Datum`],
           },
           {
+            baseId: `app1kIWnk1iD58izy`,
+            tableName: `Inställningar`,
+          },
+          {
             baseId: `appH03qFrWSkrnsH6`,
             tableName: `Sponsorer`,
             tableView: `Hemsida`,
