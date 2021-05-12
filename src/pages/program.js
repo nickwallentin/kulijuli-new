@@ -139,6 +139,7 @@ export const pageQuery = graphql`
               data {
                 Programpunkt
                 Beskrivning
+                Fotograf
                 Bild {
                   localFiles {
                     childImageSharp {
@@ -161,12 +162,6 @@ export const pageQuery = graphql`
             }
           }
         }
-      }
-    }
-    airtable(table: { eq: "Inställningar" }) {
-      data {
-        Namn
-        Aktiv
       }
     }
   }

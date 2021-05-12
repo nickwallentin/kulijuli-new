@@ -23,6 +23,9 @@ const ProgramItem = ({ item }) => {
                 <Img
                   fluid={item?.data?.Large?.localFiles[0].childImageSharp.fluid}
                 />
+                {item.data.Fotograf ? (
+                  <span>{`Fotograf: ${item.data.Fotograf}`}</span>
+                ) : null}
               </figure>
               <div className="content">
                 <h3>{item.data.Programpunkt}</h3>
@@ -61,6 +64,17 @@ const Modal = styled.div`
     height: auto !important;
     border-radius: 0px !important;
     display: block;
+    span {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      padding: 0.3rem;
+      line-height: 14px;
+      background: black;
+      color: white;
+      margin: 0px;
+      font-size: 12px;
+    }
   }
   .content {
     padding: 1.5rem 1rem;
