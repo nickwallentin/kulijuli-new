@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-const useProgamSettings = () => {
+const useProgramSettings = () => {
   const data = useStaticQuery(graphql`
     query getProgramSettings {
       allAirtable(filter: { table: { eq: "Inställningar" } }) {
@@ -19,4 +19,4 @@ const useProgamSettings = () => {
   return data.allAirtable.edges
 }
 
-export default useProgamSettings
+export default useProgramSettings
