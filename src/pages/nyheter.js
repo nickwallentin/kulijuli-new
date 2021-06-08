@@ -38,7 +38,7 @@ const BlogPage = () => {
                 <small style={{ display: "block", marginBottom: "15px" }}>
                   {posts[0].node.data.Publicerad}
                 </small>
-                {/*<p>{posts[0].node.excerpt}</p>*/}
+                <p>{posts[0].node.data.Text.childMarkdownRemark.excerpt}</p>
               </div>
             </Article>
           </Hero>
@@ -60,7 +60,7 @@ const BlogPage = () => {
                     <div className="article-content">
                       <h2>{post.data.Rubrik}</h2>
                       <small>{post.data.Publicerad}</small>
-                      {/*<p>{post.excerpt}</p>*/}
+                      <p>{post.data.Text.childMarkdownRemark.excerpt}</p>
                     </div>
                   </Article>
                 )
