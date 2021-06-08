@@ -1,11 +1,11 @@
+import Img from "gatsby-image"
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
-import useBlogData from "../../queries/useBlogData"
-import { Link } from "gatsby"
+import useNewsData from "../../queries/useNewsData"
 
 const SectionArticles = () => {
-  const posts = useBlogData()
+  const posts = useNewsData()
   return (
     <React.Fragment>
       <h2>Senaste inläggen</h2>
@@ -13,18 +13,19 @@ const SectionArticles = () => {
         <div className="latest">
           <Link
             to={posts[0].node.fields.slug}
-            alt={"Läs artikeln: " + posts[0].node.frontmatter.title}
+            alt={"Läs artikeln: " + posts[0].node.data.Rubrik}
           >
             <article className="latest">
               <Img
                 fluid={
-                  posts[0].node.frontmatter.largeThumb.childImageSharp.fluid
+                  posts[0].node.data.largeThumb.localFiles[0].childImageSharp
+                    .fluid
                 }
               />
 
-              <h3>{posts[0].node.frontmatter.title}</h3>
-              <small>{posts[0].node.frontmatter.date}</small>
-              <p>{posts[0].node.excerpt}</p>
+              <h3>{posts[0].node.data.Rubrik}</h3>
+              <small>{posts[0].node.data.Publicerad}</small>
+              <p>{posts[0].node.data.Text.childMarkdownRemark.excerpt}</p>
             </article>
           </Link>
         </div>
@@ -35,14 +36,18 @@ const SectionArticles = () => {
                 <Link
                   key={post.id}
                   to={post.fields.slug}
-                  alt={"Läs artikeln: " + post.frontmatter.title}
+                  alt={"Läs artikeln: " + post.data.Rubrik}
                 >
                   <article>
-                    <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
+                    <Img
+                      fluid={
+                        post.data.thumb.localFiles[0].childImageSharp.fluid
+                      }
+                    />
                     <div className="article-content">
-                      <h3>{post.frontmatter.title}</h3>
-                      <small>{post.frontmatter.date}</small>
-                      <p>{post.excerpt}</p>
+                      <h3>{post.data.Rubrik}</h3>
+                      <small>{post.data.Publicerad}</small>
+                      <p>{post.data.Text.childMarkdownRemark.excerpt}</p>
                     </div>
                   </article>
                 </Link>

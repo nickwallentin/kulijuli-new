@@ -1,11 +1,12 @@
 const path = require("path")
+const slugify = require("slugify")
 
 module.exports.onCreateNode = ({ node, actions }) => {
   // Transform the new node here and create a new node or
   // create a new node field.
   const { createNodeField } = actions
-  if (node.internal.type === "MarkdownRemark") {
-    const slug = path.basename(node.fileAbsolutePath, ".md")
+  if (node.table === "Nyheter") {
+    const slug = slugify(node.data.Rubrik).toLowerCase()
     createNodeField({
       //same as node: node
       node,
@@ -23,7 +24,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   //get slugs
   const posts = await graphql(`
     query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(posts)/" } }) {
+      allAirtable(filter: { table: { eq: "Nyheter" } }) {
         edges {
           node {
             fields {
@@ -34,8 +35,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+  console.log("POSTS =>", posts)
   //create new pages with unique slug
-  posts.data.allMarkdownRemark.edges.forEach(edge => {
+  posts.data.allAirtable.edges.forEach(edge => {
     createPage({
       component: blogTemplate,
       path: `/${edge.node.fields.slug}`,

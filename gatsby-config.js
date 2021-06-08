@@ -80,6 +80,15 @@ module.exports = {
             tableName: `Gäster`,
           },
           {
+            baseId: `appyJnaglWonwvKeI`,
+            tableName: `Nyheter`,
+            tableView: `Publicerade`,
+            mapping: {
+              Img: `fileNode`,
+              Text: `text/markdown`,
+            },
+          },
+          {
             baseId: `app1kIWnk1iD58izy`,
             tableName: `Datum`,
             mapping: {

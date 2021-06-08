@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import { Grid, Section, Wrap } from "../components/styled"
+
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import { Link } from "gatsby"
+import React from "react"
 import SEO from "../components/seo"
-import { Wrap, Section, Grid } from "../components/styled"
-
-import useBlogData from "../queries/useBlogData"
+import styled from "styled-components"
+import useNewsData from "../queries/useNewsData"
 
 const BlogPage = () => {
-  const posts = useBlogData()
+  const posts = useNewsData()
 
   return (
     <Layout>
@@ -26,18 +26,19 @@ const BlogPage = () => {
             >
               <Img
                 fluid={
-                  posts[0].node.frontmatter.mainOnNewsPage.childImageSharp.fluid
+                  posts[0].node.data.mainOnNewsPage.localFiles[0]
+                    .childImageSharp.fluid
                 }
               />
 
               <div className="article-content">
                 <h2 style={{ marginBottom: "5px" }}>
-                  {posts[0].node.frontmatter.title}
+                  {posts[0].node.data.Rubrik}
                 </h2>
                 <small style={{ display: "block", marginBottom: "15px" }}>
-                  {posts[0].node.frontmatter.date}
+                  {posts[0].node.data.Publicerad}
                 </small>
-                <p>{posts[0].node.excerpt}</p>
+                {/*<p>{posts[0].node.excerpt}</p>*/}
               </div>
             </Article>
           </Hero>
@@ -52,12 +53,14 @@ const BlogPage = () => {
                 return (
                   <Article key={post.fields.slug} to={`/${post.fields.slug}`}>
                     <Img
-                      fluid={post.frontmatter.onNewsPage.childImageSharp.fluid}
+                      fluid={
+                        post.data.onNewsPage.localFiles[0].childImageSharp.fluid
+                      }
                     />
                     <div className="article-content">
-                      <h2>{post.frontmatter.title}</h2>
-                      <small>{post.frontmatter.date}</small>
-                      <p>{post.excerpt}</p>
+                      <h2>{post.data.Rubrik}</h2>
+                      <small>{post.data.Publicerad}</small>
+                      {/*<p>{post.excerpt}</p>*/}
                     </div>
                   </Article>
                 )
