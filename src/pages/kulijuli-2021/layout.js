@@ -1,10 +1,10 @@
+import { Link, graphql, useStaticQuery } from "gatsby"
+import { Section, Wrap } from "../../components/styled"
+
+import Img from "gatsby-image"
+import Layout from "../../components/layout"
 import React from "react"
 import styled from "styled-components"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-
-import Layout from "../../components/layout"
-import { Section, Wrap } from "../../components/styled"
 
 const PageLayout = ({ children }) => {
   const images = useStaticQuery(graphql`
@@ -31,9 +31,7 @@ const PageLayout = ({ children }) => {
             <h1 style={{ maxWidth: "500px" }}>
               <span>Kulijuli 2021</span> Skånes största allsångsevenemang
             </h1>
-            <a href="#" className="button disabled">
-              Köp biljetter
-            </a>
+
             <Img
               className="backdrop"
               fluid={images.allFile.edges[0].node.childImageSharp.fluid}
@@ -42,12 +40,12 @@ const PageLayout = ({ children }) => {
           <PageNav>
             <li>
               <Link activeClassName="active" to="/kulijuli-2021">
-                Om Kulijuli 2021
+                Om Kulijuli
               </Link>
             </li>
             <li>
               <Link activeClassName="active" to="/kulijuli-2021/program">
-                Program
+                Program 2021
               </Link>
             </li>
           </PageNav>

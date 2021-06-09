@@ -1,12 +1,11 @@
-import { Link } from "gatsby"
-import styled from "styled-components"
 import React, { useState } from "react"
 
+import { Link } from "gatsby"
 import Logo from "../assets/kulijuli-logo.svg"
-import MenuOpenIcon from "../assets/menu.svg"
 import MenuCloseIcon from "../assets/closeMenu.svg"
-
+import MenuOpenIcon from "../assets/menu.svg"
 import { Wrap } from "../components/styled"
+import styled from "styled-components"
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -29,8 +28,8 @@ const Header = () => {
             </Link>
           </div>
           <div id="right">
-            <Link className="hide-mobile" to="/hx-grytan-2020">
-              Hx-Grytan
+            <Link className="hide-mobile" to="/sponsorer">
+              Sponsorer
             </Link>
             <Link className="hide-mobile" to="/nyheter">
               Nyheter
