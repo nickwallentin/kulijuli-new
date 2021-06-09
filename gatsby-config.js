@@ -35,34 +35,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/content/posts/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `press`,
-        path: `${__dirname}/content/press/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `podcast`,
-        path: `${__dirname}/content/podcast/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "images",
-        path: `${__dirname}/content/images`,
-      },
-    },
+
     {
       resolve: `gatsby-source-airtable`,
       options: {

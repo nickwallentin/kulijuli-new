@@ -1,7 +1,7 @@
-import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import React from "react"
 import { Wrap } from "../components/styled"
+import styled from "styled-components"
 
 const Footer = () => {
   return (
@@ -22,6 +22,9 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/nyheter">Nyheter</Link>
+              </li>
+              <li>
+                <Link to="/sponsorer">Sponsorer</Link>
               </li>
             </ul>
           </div>
@@ -51,9 +54,6 @@ const Footer = () => {
           <div>
             <h4>Press</h4>
             <ul>
-              <li>
-                <Link to="/press">Kulijuli i Media</Link>
-              </li>
               <li>
                 <Link to="/press/material">Pressmaterial</Link>
               </li>
