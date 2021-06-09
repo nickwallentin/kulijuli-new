@@ -64,13 +64,12 @@ const IndexPage = () => {
       </Section>
       <Section>
         <Wrap>
-          <SectionSocialCalls />
+          <SectionSponsors />
         </Wrap>
       </Section>
-
       <Section>
         <Wrap>
-          <SectionSponsors />
+          <SectionSocialCalls />
         </Wrap>
       </Section>
     </Layout>
