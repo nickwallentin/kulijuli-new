@@ -62,6 +62,11 @@ module.exports = {
             },
           },
           {
+            baseId: `appgYoivotXvIK7CQ`,
+            tableName: `Press`,
+            tableView: `Hemsidan`,
+          },
+          {
             baseId: `app1kIWnk1iD58izy`,
             tableName: `Datum`,
             mapping: {

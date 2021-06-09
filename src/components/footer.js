@@ -55,6 +55,9 @@ const Footer = () => {
             <h4>Press</h4>
             <ul>
               <li>
+                <Link to="/press">Kulijuli i Media</Link>
+              </li>
+              <li>
                 <Link to="/press/material">Pressmaterial</Link>
               </li>
             </ul>
