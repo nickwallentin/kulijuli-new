@@ -55,7 +55,7 @@ const Modal = styled.div`
   box-shadow: 0px 10px 10px #00000020;
   .modal-container {
     overflow-y: scroll;
-    max-height: 60vh;
+    max-height: 90vh;
     border-radius: 5px;
   }
 
