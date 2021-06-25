@@ -56,6 +56,7 @@ export const pageQuery = graphql`
           id
           data {
             Datum
+            Beskrivning
             Program {
               data {
                 Programpunkt
@@ -113,11 +114,12 @@ const Styles = styled.div`
       h2 {
         display: block;
         padding-bottom: 10px;
-        border-bottom: 1px solid #f4f4f4;
+
         margin-bottom: 0px;
         font-size: 24px;
       }
       ul {
+        border-top: 1px solid #f4f4f4;
         margin: 0px;
         list-style: none;
         padding: 1rem 0px;

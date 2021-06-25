@@ -22,6 +22,7 @@ const ProgramDay = ({ day }) => {
       {isOpen && (
         <div className="section">
           <h2>Innehåll</h2>
+          <p>{day.node.data.Beskrivning}</p>
           <ul>
             {day.node.data.Program.map(item => {
               return <ProgramItem item={item} />
