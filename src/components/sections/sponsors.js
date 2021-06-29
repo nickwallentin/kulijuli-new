@@ -59,7 +59,7 @@ export default SectionSponsors
 
 const Sponsors = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
   a {
     text-decoration: none;
@@ -68,8 +68,5 @@ const Sponsors = styled.div`
       color: black;
       text-align: center;
     }
-  }
-  .main {
-    grid-area: span 2 / span 2;
   }
 `
