@@ -39,7 +39,7 @@ const IndexPage = () => {
                 <span>Kulijuli 2021</span>TV-sändningen:
               </h2>
               <p>13, 20 och 27 juli, kl 19.00</p>
-              <Link to="/kulijuli-2021/program" className="button">
+              <Link to="/kulijuli-2021/live" className="button">
                 Se programmet
               </Link>
               <Img
