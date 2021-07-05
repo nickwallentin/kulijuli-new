@@ -1,13 +1,12 @@
-import React from "react"
+import { Grid, Section, Wrap } from "../../components/styled"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
 
-import PageLayout from "./layout"
-import SEO from "../../components/seo"
 import CreandiaLogo from "../../assets/creandia-logo.svg"
-
-import { Wrap, Section, Grid } from "../../components/styled"
+import Img from "gatsby-image"
+import PageLayout from "./layout"
+import React from "react"
+import SEO from "../../components/seo"
+import styled from "styled-components"
 
 const EventPage = () => {
   const images = useStaticQuery(graphql`

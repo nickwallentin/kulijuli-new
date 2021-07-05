@@ -1,16 +1,19 @@
 import "dayjs/locale/sv"
 
 import { Grid, Section, Wrap } from "../../../components/styled"
+import React, { useState } from "react"
 
+import AboutSection from "../../../components/sections/about"
 import Layout from "../../../components/layout"
+import { Link } from "gatsby"
 import ProgramDay from "../../../components/program/programDay"
-import React from "react"
 import dayjs from "dayjs"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import { useStaticQuery } from "gatsby"
 
 const LivePage = ({ data }) => {
+  const [tab, setTab] = useState(0)
   return (
     <Layout>
       <Styles>
@@ -68,14 +71,39 @@ const LivePage = ({ data }) => {
               </div>
             </Wrap>
           </Section>
-          <Section bg="white">
-            <Wrap>
-              <h2>Program</h2>
-              {data.allAirtable.edges.map(day => {
-                return <ProgramDay day={day} />
-              })}
-            </Wrap>
-          </Section>
+          <PageNav>
+            <li>
+              <a
+                className={tab === 0 ? "active" : null}
+                onClick={() => setTab(0)}
+                href="#"
+              >
+                Om Kulijuli
+              </a>
+            </li>
+            <li>
+              <a
+                className={tab !== 0 ? "active" : null}
+                onClick={() => setTab(1)}
+                href="#"
+              >
+                Om Kulijuli
+              </a>
+            </li>
+          </PageNav>
+          {tab === 0 ? (
+            <Section bg="white">
+              <Wrap>
+                <h2>Program</h2>
+                {data.allAirtable.edges.map(day => {
+                  return <ProgramDay day={day} />
+                })}
+              </Wrap>
+            </Section>
+          ) : (
+            <AboutSection />
+          )}
+
           {/*
         <Section>
           <Wrap>
@@ -198,6 +226,48 @@ const Styles = styled.div`
             }
           }
         }
+      }
+    }
+  }
+`
+
+const PageNav = styled.ul`
+  max-width: 700px;
+  margin: 0px auto;
+  margin-top: 30px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    margin: 0px;
+    width: 99%;
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+
+    a {
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      padding: 20px 15px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 700;
+      background: #ffffff90;
+
+      &:hover {
+        background: white;
+      }
+
+      &.active {
+        background: white;
+        box-shadow: 0px -14px 19px #00000005;
       }
     }
   }
