@@ -17,14 +17,7 @@ const LivePage = ({ data }) => {
         <div>
           <Section>
             <Wrap>
-              <div
-                style={{
-                  background: "#039576",
-                  padding: "1rem",
-                  borderRadius: "5px",
-                  color: "white ",
-                }}
-              >
+              <div>
                 <Grid>
                   <div>
                     <h1>Kulijuli - TV-versionen</h1>
