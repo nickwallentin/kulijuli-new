@@ -36,9 +36,9 @@ const LivePage = ({ data }) => {
                   </div>
                   <div>
                     {data.allAirtable.edges.map(({ node: day }) => {
-                      const now = "2021-07-13T19:00:00.000Z" //dayjs().add(2, "hour").toISOString()
+                      const now = dayjs().add(2, "hour").toISOString()
                       const end = dayjs(day.data.Datum)
-                        .add(1, "day")
+                        .add(6, "day")
                         .toISOString()
 
                       if (now < day.data.Datum || end < now) {
