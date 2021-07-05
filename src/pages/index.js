@@ -34,11 +34,14 @@ const IndexPage = () => {
       <Section>
         <Wrap>
           <Grid cols="2fr 1fr">
-            <ContentBlockOne to="/kulijuli-2021">
+            <ContentBlockOne to="/kulijuli-2021/live">
               <h2>
-                <span>Kulijuli 2021</span>Skåne största allsångsevenemang
+                <span>Kulijuli 2021</span>TV-sändningen:
               </h2>
-              <div className="button">Läs mer</div>
+              <p>13, 20 och 27 juli, kl 19.00</p>
+              <Link to="/kulijuli-2021/program" className="button">
+                Se programmet
+              </Link>
               <Img
                 className="backdrop"
                 fluid={images.allFile.edges[0].node.large.fluid}
