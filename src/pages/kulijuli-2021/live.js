@@ -33,7 +33,7 @@ const LivePage = () => {
           <Wrap>
             <h1>Kulijuli - TV-versionen</h1>
             <p>
-              På den här sidan kommer du att kunna del av Kulijulis
+              På den här sidan kommer du att kunna ta del av Kulijulis
               TV-sändningar enligt nedanstående tider. Välkommen åter.
             </p>
             <ul>
