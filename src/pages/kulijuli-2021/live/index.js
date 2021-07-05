@@ -78,7 +78,7 @@ const LivePage = ({ data }) => {
                 onClick={() => setTab(0)}
                 href="#"
               >
-                Om Kulijuli
+                Program
               </a>
             </li>
             <li>
