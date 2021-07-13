@@ -1,7 +1,7 @@
 import "dayjs/locale/sv"
 
 import { Grid, Section, Wrap } from "../../../components/styled"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import AboutSection from "../../../components/sections/about"
 import Layout from "../../../components/layout"
@@ -14,6 +14,16 @@ import { useStaticQuery } from "gatsby"
 
 const LivePage = ({ data }) => {
   const [tab, setTab] = useState(0)
+  const [now, setNow] = useState(dayjs().add(2, "hour").toISOString())
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log(now)
+      setNow(dayjs().add(2, "hour").toISOString())
+    }, 5000)
+    return () => {
+      clearInterval(interval)
+    }
+  })
   return (
     <Layout>
       <Styles>
@@ -36,8 +46,6 @@ const LivePage = ({ data }) => {
                   </div>
                   <div>
                     {data.allAirtable.edges.map(({ node: day }) => {
-                      const now = dayjs().add(2, "hour").toISOString()
-
                       if (now < day.data.Datum) {
                         return null
                       } else {
