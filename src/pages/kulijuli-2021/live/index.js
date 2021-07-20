@@ -152,6 +152,7 @@ const Video = styled.div`
   padding-bottom: 56.25%;
   overflow: hidden;
   max-width: 100%;
+  margin-bottom: 30px;
   iframe {
     position: absolute;
     top: 0px;
